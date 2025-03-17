@@ -13,39 +13,43 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Ga direct naar inhoud</a>
+    <!-- Verbeterde skip-link met aria-label -->
+    <a href="#main-content" class="skip-link" aria-label="Spring direct naar de hoofdinhoud">Ga direct naar inhoud</a>
     
     <header class="nav-header">
         <nav aria-label="Hoofdnavigatie">
             <div class="nav-container">
                 <a href="index.html" class="logo-link">
-                    <img src="image/logo.png" alt="PvO Keti Koti Logo" width="150" height="40">
+                    <img src="image/logo.png" alt="PvO Keti Koti Logo" width="150" height="40" loading="lazy">
                 </a>
+                <!-- Verbeterd hamburgermenu voor screenreaders -->
                 <button class="menu-toggle" 
                         aria-label="Menu openen/sluiten" 
                         aria-expanded="false"
-                        aria-controls="main-navigation">
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
+                        aria-controls="main-navigation"
+                        aria-haspopup="true">
+                    <span class="menu-bar" aria-hidden="true"></span>
+                    <span class="menu-bar" aria-hidden="true"></span>
+                    <span class="menu-bar" aria-hidden="true"></span>
                 </button>
-                <ul class="nav-links" id="main-navigation">
-                    <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
-                    <li><a href="wie-zijn-wij.html" class="nav-link">Wie Wij Zijn</a></li>
-                    <li><a href="initiatieven.html" class="nav-link">Initiatieven</a></li>
-                    <li><a href="keti-koti.html" class="nav-link">Keti Koti</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li><a href="donatie.html" class="cta-button btn-primary">Doneer</a></li>
+                <ul class="nav-links" id="main-navigation" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link active" role="menuitem" aria-current="page">Home</a></li>
+                    <li role="none"><a href="wie-zijn-wij.html" class="nav-link" role="menuitem">Wie Wij Zijn</a></li>
+                    <li role="none"><a href="initiatieven.html" class="nav-link" role="menuitem">Initiatieven</a></li>
+                    <li role="none"><a href="keti-koti.html" class="nav-link" role="menuitem">Keti Koti</a></li>
+                    <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+                    <li role="none"><a href="donatie.html" class="btn btn-primary" role="button">Doneer</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <main id="main-content">
+        <!-- Hero sectie met semantische heading -->
         <section class="hero" aria-labelledby="hero-heading">
             <div class="hero-content">
-                <h1 id="hero-heading">Bewustwording. Inclusiviteit. Respect.</h1>
-                <p class="hero-text">Samen werken we aan een toekomst waarin iedereen telt, geschiedenis erkend wordt en verbinding centraal staat.</p>
+                <h1 id="hero-heading" class="visually-hidden">Bewustwording. Inclusiviteit. Respect.</h1>
+                <p class="hero-text" role="heading" aria-level="2">Samen werken we aan een toekomst waarin iedereen telt, geschiedenis erkend wordt en verbinding centraal staat.</p>
                 <div class="hero-actions">
                     <a href="donatie.html" class="btn btn-secondary">Steun Ons</a>
                     <a href="#over-ons" class="btn btn-outline">Onze Missie</a>
@@ -53,30 +57,33 @@
             </div>
         </section>
 
+        <!-- Verbeterde sectie met landmarks -->
         <section id="over-ons" class="content-section highlight-box" aria-labelledby="over-ons-heading">
             <div class="section-inner">
                 <h2 id="over-ons-heading" class="section-title">Onze Missie</h2>
                 <div class="mission-content">
                     <p>Wij zetten ons in voor structurele erkenning van Keti Koti binnen het GVB en streven naar een blijvende verankering in de werkcultuur en maatschappij.</p>
                     <div class="mission-image">
-                        <img src="image/team.jpg" alt="Ons team" class="responsive-img">
+                        <img src="image/team.jpg" alt="Divers team van PvO Keti Koti tijdens een vergadering" class="responsive-img" loading="lazy">
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Verbeterde footer met aria-roles -->
     <footer class="footer" role="contentinfo">
         <div class="footer-content">
             <div class="footer-grid">
                 <div class="footer-info">
-                    <img src="image/logo-footer.png" alt="PvO Keti Koti Logo" width="200" height="60">
+                    <img src="image/logo-footer.png" alt="PvO Keti Koti Logo" width="200" height="60" loading="lazy">
                     <p class="footer-copyright">&copy; 2025 PvO Keti Koti</p>
                 </div>
                 <div class="footer-newsletter">
                     <form class="newsletter-form" aria-labelledby="nieuwsbrief-label">
                         <h3 id="nieuwsbrief-label" class="footer-heading">Nieuwsbrief</h3>
                         <div class="input-group">
+                            <label for="nieuwsbrief-email" class="visually-hidden">E-mailadres</label>
                             <input type="email" 
                                    id="nieuwsbrief-email" 
                                    class="input-field"
