@@ -1,0 +1,70 @@
+<section class="content-section">
+    <h2>Schrijf je in voor onze activiteiten</h2>
+    
+    <form id="inschrijfForm" class="inschrijf-formulier">
+        <div class="form-grid">
+            <!-- Persoonlijke gegevens -->
+            <div class="form-group">
+                <label for="naam">Volledige naam *</label>
+                <input type="text" id="naam" name="naam" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mailadres *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefoon">Telefoonnummer</label>
+                <input type="tel" id="telefoon" name="telefoon">
+            </div>
+
+            <!-- Activiteiten selectie -->
+            <div class="form-group">
+                <label for="activiteit">Activiteit *</label>
+                <select id="activiteit" name="activiteit" required>
+                    <option value="">Kies een activiteit</option>
+                    <option value="herdenking">Keti Koti Herdenking 1 juli</option>
+                    <option value="workshop">Workshop Slavernijverleden</option>
+                    <option value="vrijwilliger">Vrijwilligersdag</option>
+                </select>
+            </div>
+
+            <!-- Extra informatie -->
+            <div class="form-group full-width">
+                <label for="opmerkingen">Speciale wensen/dieetwensen</label>
+                <textarea id="opmerkingen" rows="4"></textarea>
+            </div>
+
+            <!-- Checkboxes -->
+            <fieldset class="form-group full-width">
+                <legend>Hoe heb je over ons gehoord?</legend>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="bron" value="collega"> Collega
+                    </label>
+                    <label>
+                        <input type="checkbox" name="bron" value="website"> Website
+                    </label>
+                    <label>
+                        <input type="checkbox" name="bron" value="social"> Social Media
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- Privacy -->
+            <div class="form-group full-width">
+                <label class="privacy-label">
+                    <input type="checkbox" required>
+                    Ik ga akkoord met de <a href="/privacy" target="_blank">privacyvoorwaarden</a> *
+                </label>
+            </div>
+        </div>
+
+        <button type="submit" class="cta-button">Inschrijven →</button>
+    </form>
+
+    <div id="bevestiging" class="bevestigingsmelding" hidden>
+        <p>🎉 Bedankt voor je inschrijving! We hebben een bevestiging gestuurd naar je e-mailadres.</p>
+    </div>
+</section>

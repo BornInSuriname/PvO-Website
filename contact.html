@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PvO Keti Koti - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="image/favicon.png">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Ga direct naar inhoud</a>
+    
+    <header class="nav-header">
+        <nav aria-label="Hoofdnavigatie">
+            <div class="nav-container">
+                <a href="index.html" class="logo-link">
+                    <img src="image/logo.png" alt="PvO Keti Koti Logo" width="150" height="40">
+                </a>
+                <button class="menu-toggle" 
+                        aria-label="Menu openen/sluiten" 
+                        aria-expanded="false"
+                        aria-controls="main-navigation">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </button>
+                <ul class="nav-links" id="main-navigation">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="wie-zijn-wij.html" class="nav-link">Wie Wij Zijn</a></li>
+                    <li><a href="initiatieven.html" class="nav-link">Initiatieven</a></li>
+                    <li><a href="waarom-keti-koti.html" class="nav-link">Waarom Keti Koti?</a></li>
+                    <li><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
+                    <li><a href="donatie.html" class="cta-button btn-primary">Doneer</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" aria-labelledby="contact-heading">
+            <div class="hero-content">
+                <h1 id="contact-heading">Contacteer Ons</h1>
+                <p class="hero-text">Wij staan open voor al uw vragen en suggesties</p>
+            </div>
+        </section>
+
+        <section class="content-section" aria-labelledby="form-heading">
+            <div class="section-inner">
+                <h2 id="form-heading" class="section-title">Stuur een bericht</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="naam">Naam:</label>
+                        <input type="text" id="naam" name="naam" required class="input-field">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required class="input-field">
+                    </div>
+                    <div class="form-group">
+                        <label for="bericht">Bericht:</label>
+                        <textarea id="bericht" name="bericht" rows="5" required class="input-field"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-accent">Verstuur</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Zelfde footer als index.html -->
+</body>
+</html>
