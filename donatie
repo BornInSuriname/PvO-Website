@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <!-- Meta tags zoals andere pagina's -->
+</head>
+<body>
+    <!-- Header zoals contact.html -->
+
+    <main id="main-content">
+        <section class="hero" aria-labelledby="donatie-heading">
+            <div class="hero-content">
+                <h1 id="donatie-heading">Steun Ons Werk</h1>
+                <p class="hero-text">Draag bij aan een inclusieve toekomst</p>
+            </div>
+        </section>
+
+        <section class="content-section" aria-labelledby="donatie-opties">
+            <div class="section-inner">
+                <div class="donatie-grid">
+                    <article class="donatie-optie highlight-box">
+                        <h3>Eenmalige donatie</h3>
+                        <a href="#" class="btn btn-accent">Doneer nu</a>
+                    </article>
+                    <article class="donatie-optie highlight-box">
+                        <h3>Word lid</h3>
+                        <a href="#" class="btn btn-secondary">Aanmelden</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer zoals contact.html -->
+</body>
+</html>
