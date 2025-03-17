@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <!-- Meta tags zoals andere pagina's -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Doneren - PvO Keti Koti</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="image/favicon.png">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Header zoals contact.html -->
+    <a href="#main-content" class="skip-link">Ga direct naar inhoud</a>
+    
+    <header class="nav-header">
+        <nav aria-label="Hoofdnavigatie">
+            <div class="nav-container">
+                <a href="index.html" class="logo-link">
+                    <img src="image/logo.png" alt="PvO Keti Koti Logo" class="logo-img" loading="lazy">
+                </a>
+                <button class="menu-toggle" aria-label="Menu openen/sluiten" aria-expanded="false">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="wie-zijn-wij.html" class="nav-link">Wie Wij Zijn</a></li>
+                    <li><a href="initiatieven.html" class="nav-link">Initiatieven</a></li>
+                    <li><a href="keti-koti.html" class="nav-link">Keti Koti</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="doneren.html" class="btn btn-primary">Doneer</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     <main id="main-content">
         <section class="hero" aria-labelledby="donatie-heading">
@@ -19,17 +48,34 @@
                 <div class="donatie-grid">
                     <article class="donatie-optie highlight-box">
                         <h3>Eenmalige donatie</h3>
-                        <a href="#" class="btn btn-accent">Doneer nu</a>
+                        <p>Steun ons met een eenmalige bijdrage via Tikkie.</p>
+                        <a href="https://tikkie.me/pay/voorbeeldlink" target="_blank" class="btn btn-accent">Doneer nu</a>
                     </article>
                     <article class="donatie-optie highlight-box">
                         <h3>Word lid</h3>
-                        <a href="#" class="btn btn-secondary">Aanmelden</a>
+                        <p>Sluit je aan bij onze gemeenschap en steun ons structureel.</p>
+                        <a href="inschrijfformulier.html" class="btn btn-secondary">Aanmelden</a>
                     </article>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer zoals contact.html -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <img src="image/logo-footer.png" alt="PvO Keti Koti Logo" class="logo-img" loading="lazy">
+                    <p class="footer-copyright">&copy; <span id="current-year"></span> PvO Keti Koti</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("current-year").textContent = new Date().getFullYear();
+        });
+    </script>
 </body>
 </html>
