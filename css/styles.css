@@ -128,7 +128,7 @@ body {
 /* ========== HERO SECTIE ========== */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-              url('images/hero-bg.jpg') center/cover;
+              url('image/hero-bg.jpg') center/cover;
   background-attachment: scroll;
   min-height: 60vh;
   display: flex;
