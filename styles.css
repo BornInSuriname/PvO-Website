@@ -1,110 +1,89 @@
-/* Reset en basisstijlen */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* Algemene stijlen */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f4f4;
-  line-height: 1.6;
-  margin-bottom: 60px; /* Voor fixed footer */
+    font-family: 'Poppins', sans-serif;
+    background-color: #FAFAFA;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-/* Skip-link voor toegankelijkheid */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 10px;
-  background: #1E3A5F;
-  color: white;
-  padding: 8px 16px;
-  text-decoration: none;
-  z-index: 1000;
-  transition: top 0.3s ease;
+/* Logo en favicon styling */
+.logo img, .favicon, .logo-footer img {
+    border-radius: 50%; /* Zorgt ervoor dat de afbeeldingen echt rond zijn */
+    object-fit: cover;
+    width: 100px; /* Pas de grootte aan naar wens */
+    height: 100px;
+    display: block;
+    margin: auto;
 }
 
-.skip-link:focus {
-  top: 10px;
-  outline: 2px solid #FFD700;
+/* Navigatie en hamburger menu */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #162447;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Header stijlen */
-header {
-  background-color: #1E3A5F;
-  color: white;
-  padding: 20px;
-  text-align: center;
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
 }
 
-/* Navigatie */
-nav ul {
-  list-style: none;
-  padding: 20px 0;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.1);
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-nav ul li {
-  display: inline-block;
-  margin: 0 15px;
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
 }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 5px 10px;
-  transition: color 0.3s ease;
-}
+/* Responsief menu */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
 
-nav ul li a:hover,
-nav ul li a:focus {
-  color: #FFD700;
-  outline: none;
-}
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #162447;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
 
-/* Hoofdinhoud */
-main {
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+    .nav-links.active {
+        display: flex;
+    }
 }
 
 /* Footer */
 footer {
-  background-color: #1E3A5F;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+    background-color: #162447;
+    padding: 20px;
+    text-align: center;
+    color: white;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
-
-  .skip-link:focus {
-    top: 5px;
-    left: 5px;
-  }
-
-  footer {
-    position: static; /* Footer onder content op mobiel */
-  }
-  
-  body {
-    margin-bottom: 0;
-  }
+footer ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* Focus zichtbaarheid voor alle elementen */
-*:focus {
-  outline: 2px solid #FFD700;
-  outline-offset: 2px;
+footer ul li a {
+    color: #E0E0E0;
+    text-decoration: none;
 }
