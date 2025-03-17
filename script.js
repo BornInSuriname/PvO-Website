@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Verbeterde mobiele navigatie (hamburgermenu)
+    // Hamburgermenu functionaliteit
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
 
