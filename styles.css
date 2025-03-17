@@ -1,6 +1,110 @@
-body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
-header { background-color: #1E3A5F; color: white; padding: 20px; text-align: center; }
-nav ul { list-style: none; padding: 0; text-align: center; }
-nav ul li { display: inline; margin: 0 10px; }
-nav ul li a { color: white; text-decoration: none; }
-footer { background-color: #1E3A5F; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+/* Reset en basisstijlen */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+  margin-bottom: 60px; /* Voor fixed footer */
+}
+
+/* Skip-link voor toegankelijkheid */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: #1E3A5F;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 1000;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 10px;
+  outline: 2px solid #FFD700;
+}
+
+/* Header stijlen */
+header {
+  background-color: #1E3A5F;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Navigatie */
+nav ul {
+  list-style: none;
+  padding: 20px 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #FFD700;
+  outline: none;
+}
+
+/* Hoofdinhoud */
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Footer */
+footer {
+  background-color: #1E3A5F;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .skip-link:focus {
+    top: 5px;
+    left: 5px;
+  }
+
+  footer {
+    position: static; /* Footer onder content op mobiel */
+  }
+  
+  body {
+    margin-bottom: 0;
+  }
+}
+
+/* Focus zichtbaarheid voor alle elementen */
+*:focus {
+  outline: 2px solid #FFD700;
+  outline-offset: 2px;
+}
