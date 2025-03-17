@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>PvO Keti Koti - Contact</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="image/favicon.png">
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script defer src="js/script.js"></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Ga direct naar inhoud</a>
@@ -16,7 +16,7 @@
         <nav aria-label="Hoofdnavigatie">
             <div class="nav-container">
                 <a href="index.html" class="logo-link">
-                    <img src="image/logo.png" alt="PvO Keti Koti Logo" width="150" height="40">
+                    <img src="images/logo.png" alt="PvO Keti Koti Logo" width="150" height="40" loading="lazy">
                 </a>
                 <button class="menu-toggle" 
                         aria-label="Menu openen/sluiten" 
@@ -26,13 +26,13 @@
                     <span class="menu-bar"></span>
                     <span class="menu-bar"></span>
                 </button>
-                <ul class="nav-links" id="main-navigation">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="wie-zijn-wij.html" class="nav-link">Wie Wij Zijn</a></li>
-                    <li><a href="initiatieven.html" class="nav-link">Initiatieven</a></li>
-                    <li><a href="waarom-keti-koti.html" class="nav-link">Waarom Keti Koti?</a></li>
-                    <li><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
-                    <li><a href="donatie.html" class="cta-button btn-primary">Doneer</a></li>
+                <ul class="nav-links" id="main-navigation" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                    <li role="none"><a href="wie-zijn-wij.html" class="nav-link" role="menuitem">Wie Wij Zijn</a></li>
+                    <li role="none"><a href="initiatieven.html" class="nav-link" role="menuitem">Initiatieven</a></li>
+                    <li role="none"><a href="keti-koti.html" class="nav-link" role="menuitem">Keti Koti</a></li>
+                    <li role="none"><a href="contact.html" class="nav-link active" role="menuitem" aria-current="page">Contact</a></li>
+                    <li role="none"><a href="donatie.html" class="cta-button btn-primary" role="button">Doneer</a></li>
                 </ul>
             </div>
         </nav>
@@ -47,27 +47,62 @@
         </section>
 
         <section class="content-section" aria-labelledby="form-heading">
-            <div class="section-inner">
-                <h2 id="form-heading" class="section-title">Stuur een bericht</h2>
-                <form class="contact-form">
+            <div class="section-inner contact-grid">
+                <div class="contact-info highlight-box">
+                    <h2 class="section-title">Direct contact</h2>
+                    <ul class="contact-details">
+                        <li>📧 <a href="mailto:info@pvoketikoti.nl">info@pvoketikoti.nl</a></li>
+                        <li>📞 020 - 123 45 67</li>
+                        <li>📍 GVB Hoofdkantoor<br>Arlandaweg 100, Amsterdam</li>
+                    </ul>
+                </div>
+
+                <form class="contact-form" id="contactForm" aria-labelledby="form-heading">
+                    <h2 id="form-heading" class="section-title">Stuur een bericht</h2>
                     <div class="form-group">
-                        <label for="naam">Naam:</label>
+                        <label for="naam">Naam *</label>
                         <input type="text" id="naam" name="naam" required class="input-field">
                     </div>
                     <div class="form-group">
-                        <label for="email">E-mail:</label>
+                        <label for="email">E-mail *</label>
                         <input type="email" id="email" name="email" required class="input-field">
                     </div>
                     <div class="form-group">
-                        <label for="bericht">Bericht:</label>
+                        <label for="bericht">Bericht *</label>
                         <textarea id="bericht" name="bericht" rows="5" required class="input-field"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-accent">Verstuur</button>
+                    <button type="submit" class="btn btn-accent">
+                        <span class="btn-text">Verstuur</span>
+                        <span class="btn-icon">→</span>
+                    </button>
                 </form>
             </div>
         </section>
     </main>
 
-    <!-- Zelfde footer als index.html -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <img src="images/logo-footer.png" alt="PvO Keti Koti Logo" width="200" height="60" loading="lazy">
+                    <p class="footer-copyright">&copy; 2025 PvO Keti Koti</p>
+                </div>
+                <div class="footer-newsletter">
+                    <form class="newsletter-form" aria-labelledby="newsletter-label">
+                        <h3 id="newsletter-label" class="footer-heading">Nieuwsbrief</h3>
+                        <div class="input-group">
+                            <input type="email" 
+                                   id="newsletter-email" 
+                                   class="input-field"
+                                   placeholder="E-mailadres"
+                                   required
+                                   aria-required="true">
+                            <button type="submit" class="btn btn-accent">Inschrijven</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
