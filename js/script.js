@@ -4,61 +4,103 @@ const Navigation = (() => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
 
-    if (!menuToggle || !navLinks) return; // Voorkom fouten als elementen ontbreken
-
     const toggleMenu = () => {
-      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-      menuToggle.setAttribute('aria-expanded', !isExpanded);
+      menuToggle.classList.toggle('active');
       navLinks.classList.toggle('active');
-      menuToggle.classList.toggle('open');
+      document.body.classList.toggle('nav-open');
     };
 
-    // Menu sluiten als er buiten wordt geklikt
+    menuToggle.addEventListener('click', toggleMenu);
+
+    // Sluit menu bij klik buiten
     document.addEventListener('click', (e) => {
-      if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+      if (!e.target.closest('.nav-container')) {
+        menuToggle.classList.remove('active');
         navLinks.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.classList.remove('open');
+        document.body.classList.remove('nav-open');
       }
     });
-
-    menuToggle.addEventListener('click', toggleMenu);
   };
 
   return { init };
 })();
 
-// Form Handler
-const FormHandler = (() => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
-    }
-
-    // Simuleer verzending
-    setTimeout(() => {
-      form.reset();
-      showSuccessMessage(form);
-    }, 1000);
+// Accordion Module
+const Accordion = (() => {
+  const init = () => {
+    document.querySelectorAll('.accordion-header').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        content.style.maxHeight = 
+          content.style.maxHeight ? null : `${content.scrollHeight}px`;
+        button.setAttribute('aria-expanded', 
+          button.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+        );
+      });
+    });
   };
 
-  const showSuccessMessage = (form) => {
-    const successDiv = document.createElement('div');
-    successDiv.className = 'success-message';
-    successDiv.textContent = 'Bedankt voor uw bericht!';
-    form.parentNode.insertBefore(successDiv, form.nextSibling);
+  return { init };
+})();
 
-    // Verwijder het bericht na 3 seconden
-    setTimeout(() => successDiv.remove(), 3000);
+// Donation Module
+const Donation = (() => {
+  let currentAmount = 0;
+  
+  const updateMeter = () => {
+    const progress = document.querySelector('.donation-progress');
+    const percentage = (currentAmount / 10000) * 100;
+    progress.style.width = `${percentage}%`;
+  };
+
+  const init = () => {
+    document.querySelectorAll('.donation-amount').forEach(button => {
+      button.addEventListener('click', (e) => {
+        currentAmount += parseInt(e.target.dataset.amount);
+        updateMeter();
+        // Hier zou API-call komen
+        console.log(`Donatie van €${e.target.dataset.amount} verwerkt`);
+      });
+    });
+  };
+
+  return { init };
+})();
+
+// Form Validation Module
+const FormValidator = (() => {
+  const showError = (input, message) => {
+    const error = input.nextElementSibling;
+    error.textContent = message;
+    input.classList.add('error');
+  };
+
+  const validateEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
   const init = () => {
     document.querySelectorAll('form').forEach(form => {
-      form.addEventListener('submit', handleSubmit);
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let isValid = true;
+
+        form.querySelectorAll('[required]').forEach(input => {
+          if (input.value.trim() === '') {
+            showError(input, 'Dit veld is verplicht');
+            isValid = false;
+          }
+
+          if (input.type === 'email' && !validateEmail(input.value)) {
+            showError(input, 'Ongeldig emailadres');
+            isValid = false;
+          }
+        });
+
+        if (isValid) {
+          form.submit();
+        }
+      });
     });
   };
 
@@ -66,28 +108,22 @@ const FormHandler = (() => {
 })();
 
 // Initialisatie
-document.addEventListener("DOMContentLoaded", function() {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-
-    menuToggle.addEventListener("click", function() {
-        navLinks.classList.toggle("active");
-    });
-});
+document.addEventListener('DOMContentLoaded', () => {
+  Navigation.init();
+  Accordion.init();
+  Donation.init();
+  FormValidator.init();
 
   // Dynamisch jaar in footer
-  const yearElement = document.getElementById('current-year');
-  if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
-  }
+  document.getElementById('current-year').textContent = new Date().getFullYear();
 
-  // Smooth scroll voor anchor links
+  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
   });
