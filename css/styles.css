@@ -1,288 +1,226 @@
-/* ========== CSS VARIABLES ========== */
+/* ========== CULTURELE CSS VARIABLES ========== */
 :root {
-  /* Kleurenpalet */
-  --primary-color: #1E3A5F;
-  --secondary-color: #3E2723;
-  --accent-color: #DAA520;
-  --highlight-color: #FFD700;
-  --text-dark: #EFEBE9;
-  --text-light: #FFFFFF;
-  --background-dark: #000000;
+  --primary-color: #1A1A1A;
+  --secondary-color: #B22234;
+  --accent-color: #FFD700;
+  --highlight-color: #008000;
+  --text-dark: #F0EAD6;
+  --background-pattern: linear-gradient(45deg, 
+    rgba(178, 34, 52, 0.1) 25%, 
+    transparent 25%, 
+    transparent 50%, 
+    rgba(178, 34, 52, 0.1) 50%, 
+    rgba(178, 34, 52, 0.1) 75%, 
+    transparent 75%);
   
-  /* Overige variabelen */
   --border-radius: 8px;
-  --shadow: 0 2px 10px rgba(255, 215, 0, 0.1);
+  --shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --max-width: 1200px;
+  --max-width: 1280px;
 }
 
 /* ========== BASISSTIJLEN ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', system-ui, -apple-system, sans-serif;
   color: var(--text-dark);
-  background-color: var(--background-dark);
+  background: var(--primary-color) var(--background-pattern);
   line-height: 1.6;
-  margin: 0;
-  padding-top: 80px;
-}
-
-/* ========== LAYOUT ========== */
-.nav-container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.section-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 20px;
+  overflow-x: hidden;
 }
 
 /* ========== NAVIGATIE ========== */
 .nav-header {
-  background: linear-gradient(135deg, var(--primary-color) 0%, #15253F 100%);
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(10px);
   position: fixed;
-  top: 0;
   width: 100%;
+  top: 0;
   z-index: 1000;
-  border-bottom: 3px solid var(--highlight-color);
+  border-bottom: 3px solid var(--accent-color);
+}
+
+.nav-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-links {
   display: flex;
   gap: 2rem;
   list-style: none;
-  margin: 0;
-  padding: 1rem 0;
 }
 
 .nav-links a {
   color: var(--text-dark);
   text-decoration: none;
-  padding: 0.8rem 1.2rem;
+  padding: 0.5rem 1rem;
   border-radius: var(--border-radius);
   transition: var(--transition);
+  position: relative;
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
-  background: var(--highlight-color);
-  color: var(--primary-color);
-  outline: 2px solid var(--highlight-color);
-  outline-offset: 3px;
-}
-
-/* Menu toggle animaties */
-.menu-toggle {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  padding: 1rem;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-.menu-bar {
-  width: 30px;
-  height: 3px;
-  background: var(--highlight-color);
-  border-radius: 2px;
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
   transition: var(--transition);
 }
 
-.nav-links.active ~ .menu-toggle .menu-bar:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.nav-links.active ~ .menu-toggle .menu-bar:nth-child(2) {
-  opacity: 0;
-}
-
-.nav-links.active ~ .menu-toggle .menu-bar:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -6px);
-}
-
-/* Mobiele overlay */
-.nav-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
+.nav-links a:hover::after {
   width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  backdrop-filter: blur(3px);
-  z-index: 999;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
 }
 
-.nav-overlay.active {
-  opacity: 1;
-  pointer-events: all;
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-dark);
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 /* ========== HERO SECTIE ========== */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-              url('image/hero-bg.jpg') center/cover;
-  background-attachment: scroll;
-  min-height: 60vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  color: var(--text-dark);
-  text-align: center;
-  margin-bottom: 4rem;
+  justify-content: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, rgba(0,0,0,0.8), rgba(0,0,0,0.5));
+  z-index: -1;
 }
 
 .hero-content {
+  text-align: center;
   max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
-/* ========== KNOPPEN ========== */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem 2rem;
+/* ========== COMPONENTEN ========== */
+.cultural-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+
+.grid-item {
+  background: rgba(255, 255, 255, 0.05);
   border-radius: var(--border-radius);
-  font-weight: 600;
-  text-decoration: none;
+  overflow: hidden;
   transition: var(--transition);
-  border: 2px solid transparent;
+  border: 2px solid var(--accent-color);
 }
 
-.btn-primary {
-  background: var(--highlight-color);
-  color: var(--primary-color);
-}
-
-.btn-secondary {
-  background: var(--accent-color);
-  color: var(--secondary-color);
-}
-
-.btn:hover {
-  transform: translateY(-2px);
+.grid-item:hover {
+  transform: translateY(-5px);
   box-shadow: var(--shadow);
 }
 
-.btn:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.5);
+.accordion-item {
+  background: rgba(255, 215, 0, 0.1);
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 1.5rem;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding: 0 1.5rem;
+}
+
+.donation-meter {
+  height: 30px;
+  background: rgba(255, 215, 0, 0.1);
+  border-radius: var(--border-radius);
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+.donation-progress {
+  height: 100%;
+  background: var(--highlight-color);
+  width: 0;
+  transition: width 0.5s ease;
 }
 
 /* ========== RESPONSIVE DESIGN ========== */
 @media (max-width: 768px) {
-  body {
-    padding-top: 60px;
+  .menu-toggle {
+    display: block;
   }
 
   .nav-links {
     position: fixed;
-    top: 0;
+    top: 70px;
     right: -100%;
-    height: 100vh;
-    width: 70%;
-    max-width: 300px;
     background: var(--primary-color);
     flex-direction: column;
-    padding-top: 6rem;
-    transition: right 0.3s ease-in-out;
+    width: 100%;
+    max-width: 300px;
+    height: calc(100vh - 70px);
+    padding: 2rem;
+    transition: right 0.3s ease;
   }
 
   .nav-links.active {
     right: 0;
   }
 
-  .nav-links a {
-    padding: 1rem;
-    text-align: center;
-  }
-
   .hero {
-    min-height: 50vh;
-    margin-bottom: 2rem;
+    min-height: 80vh;
   }
 }
 
-@media (max-width: 480px) {
-  .hero-content {
-    padding: 1rem;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
-  
-  .btn {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
+
+  * {
+    transition: none !important;
+    animation: none !important;
   }
-}
-
-/* ========== TOEGANKELIJKHEID ========== */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-:focus:not(:focus-visible) {
-  outline: none;
-}
-
-/* Stijl voor mobiel menu */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px;
-}
-
-.menu-toggle {
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-.nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.nav-links li {
-    padding: 10px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        width: 200px;
-    }
-    .nav-links.active {
-        display: flex;
-    }
 }
