@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <!-- Meta tags zoals andere pagina's -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PvO Keti Koti - Keti Koti</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
 </head>
 <body>
-    <!-- Header zoals contact.html -->
+    <header class="nav-header">
+        <nav aria-label="Hoofdnavigatie">
+            <div class="nav-container">
+                <a href="index.html"><img src="images/logo.png" alt="PvO Keti Koti Logo"></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="wie-zijn-wij.html">Wie Wij Zijn</a></li>
+                    <li><a href="initiatieven.html">Initiatieven</a></li>
+                    <li><a href="keti-koti.html" class="active">Keti Koti</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="donatie.html" class="btn btn-primary">Doneer</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     <main id="main-content">
-        <section class="hero" aria-labelledby="ketikoti-heading">
-            <div class="hero-content">
-                <h1 id="ketikoti-heading">Keti Koti</h1>
-                <p class="hero-text">Verbroken ketenen, blijvende erkenning</p>
-            </div>
+        <section class="hero">
+            <h1>Keti Koti</h1>
+            <p>Verbroken ketenen, blijvende erkenning.</p>
         </section>
 
-        <section class="content-section" aria-labelledby="faq-heading">
-            <div class="section-inner">
-                <article class="highlight-box">
-                    <h2 id="faq-heading">Veelgestelde vragen</h2>
-                    <div class="faq-grid">
-                        <details class="faq-item">
-                            <summary>Wat betekent Keti Koti?</summary>
-                            <p>Verbroken ketenen in het Sranantongo...</p>
-                        </details>
-                        <!-- Andere FAQ items -->
-                    </div>
-                </article>
-            </div>
+        <section class="content-section">
+            <h2>Wat is Keti Koti?</h2>
+            <p>Keti Koti betekent "Verbroken Ketenen" en herdenkt de afschaffing van de slavernij op 1 juli 1863. PvO Keti Koti werkt eraan om deze dag structureel te verankeren binnen het GVB.</p>
         </section>
     </main>
 
-    <!-- Footer zoals contact.html -->
+    <footer class="footer">
+        <p>&copy; 2025 PvO Keti Koti</p>
+    </footer>
 </body>
 </html>
