@@ -9,26 +9,48 @@
 <body>
     <header class="nav-header">
         <nav>
-            <a href="index.html"><img src="images/logo.png" alt="PvO Keti Koti Logo"></a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="wie-zijn-wij.html">Wie Wij Zijn</a></li>
-                <li><a href="initiatieven.html">Initiatieven</a></li>
-                <li><a href="keti-koti.html">Keti Koti</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="donatie.html" class="active btn btn-primary">Doneer</a></li>
-            </ul>
+            <div class="nav-container">
+                <a href="index.html">
+                    <img src="image/logo.png" alt="PvO Keti Koti Logo" width="150" height="40">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="wie-zijn-wij.html">Wie Wij Zijn</a></li>
+                    <li><a href="initiatieven.html">Initiatieven</a></li>
+                    <li><a href="keti-koti.html">Keti Koti</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="donatie.html" class="btn btn-primary active">Doneer</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" class="donation-page">
         <section class="hero">
-            <h1>Steun PvO Keti Koti</h1>
+            <h1 class="donation-heading">Steun PvO Keti Koti</h1>
             <p>Jouw bijdrage helpt ons Keti Koti structureel te verankeren.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Waarom doneren?</h2>
+            <p>Met jouw steun kunnen we:</p>
+            <ul>
+                <li>Bewustwordingscampagnes organiseren.</li>
+                <li>Keti Koti een vast onderdeel maken van de werkcultuur.</li>
+                <li>Educatieve programma's en evenementen ondersteunen.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Hoe kun je doneren?</h2>
+            <p>Kies een donatiemethode die bij jou past:</p>
+            <button class="btn btn-donate">Doneer via iDeal</button>
+            <button class="btn btn-donate">Doneer via PayPal</button>
+            <button class="btn btn-donate">Bankoverschrijving</button>
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer styled-footer">
         <p>&copy; 2025 PvO Keti Koti</p>
     </footer>
 </body>
