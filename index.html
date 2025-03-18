@@ -11,6 +11,22 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="image/favicon.png">
     <script defer src="js/script.js"></script>
+    <style>
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+    </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Ga direct naar inhoud</a>
@@ -21,10 +37,7 @@
                 <a href="index.html" class="logo-link">
                     <img src="image/logo.png" alt="PvO Keti Koti Logo" width="50" height="50" loading="lazy">
                 </a>
-                <button class="menu-toggle" 
-                        aria-label="Menu openen/sluiten" 
-                        aria-expanded="false"
-                        aria-controls="main-navigation">
+                <button class="menu-toggle" aria-label="Menu openen/sluiten" aria-expanded="false" aria-controls="main-navigation">
                     <span class="menu-bar"></span>
                     <span class="menu-bar"></span>
                     <span class="menu-bar"></span>
@@ -44,8 +57,8 @@
     <main id="main-content">
         <section class="hero" aria-labelledby="hero-heading">
             <div class="hero-content">
-                <h1 id="hero-heading">Bewustwording. Inclusiviteit. Respect.</h1>
-                <p class="hero-text">Samen werken we aan een toekomst waarin iedereen telt</p>
+                <h1 id="hero-heading">Samen bouwen aan bewustzijn en verbinding</h1>
+                <p class="hero-text">PvO Keti Koti vergroot het bewustzijn en bouwt aan een rechtvaardige en verbonden toekomst met activiteiten zoals het bestickeren van trams en het uitdelen van traditionele lekkernijen.</p>
                 <div class="hero-actions">
                     <a href="donatie.html" class="btn btn-secondary">Steun Ons</a>
                     <a href="#over-ons" class="btn btn-outline">Onze Missie</a>
@@ -55,64 +68,30 @@
 
         <section id="over-ons" class="content-section highlight-box" aria-labelledby="over-ons-heading">
             <div class="section-inner">
-                <h2 id="over-ons-heading" class="section-title">Onze Missie</h2>
-                <div class="mission-content">
-                    <p>PvO Keti Koti staat voor een toekomst waarin respect, inclusiviteit en bewustwording een vast onderdeel zijn van onze werk- en leefomgeving. Wij zetten ons in voor de structurele erkenning van Keti Koti binnen het GVB en werken aan een blijvende verankering van deze historische dag in de samenleving.</p>
-                    <h3>Waarom Keti Koti?</h3>
-                    <p>Keti Koti is meer dan een herdenking; het is een beweging die streeft naar verbinding en vooruitgang. Wij willen de impact van het slavernijverleden zichtbaar maken en bijdragen aan een inclusieve toekomst.</p>
-                    <ul>
-                        <li>✅ <strong>Bewustwording vergroten:</strong> Educatie en dialoog over de impact van het slavernijverleden.</li>
-                        <li>✅ <strong>Inclusiviteit bevorderen:</strong> Een diverse en rechtvaardige werkcultuur binnen het GVB.</li>
-                        <li>✅ <strong>Een blijvende impact creëren:</strong> Keti Koti structureel verankeren in onze samenleving.</li>
-                    </ul>
-                    <div class="mission-image">
-                        <img src="image/team.jpg" alt="Divers team van PvO Keti Koti" class="responsive-img" loading="lazy">
-                    </div>
-                </div>
+                <h2 id="over-ons-heading" class="section-title">Over PvO Keti Koti</h2>
+                <p>PvO Keti Koti nodigt iedereen uit om mee te bouwen aan een inclusieve organisatie waarin erkenning en begrip centraal staan. Jouw inzet maakt daadwerkelijk verschil!</p>
+                <ul>
+                    <li>✅ <strong>Bewustwording:</strong> Actieve educatie en dialoog over het slavernijverleden.</li>
+                    <li>✅ <strong>Inclusiviteit:</strong> Het stimuleren van een diverse en rechtvaardige cultuur binnen het GVB.</li>
+                    <li>✅ <strong>Actieve deelname:</strong> Uitnodiging tot deelname aan herdenkingen en activiteiten.</li>
+                </ul>
             </div>
         </section>
 
         <section id="steun-ons" class="content-section" aria-labelledby="steun-ons-heading">
             <div class="section-inner">
-                <h2 id="steun-ons-heading" class="section-title">Hoe Kun Jij Bijdragen?</h2>
-                <p>Wil jij ook bijdragen aan een inclusieve samenleving en de erkenning van Keti Koti versterken? Er zijn verschillende manieren waarop je kunt helpen:</p>
-                <ul>
-                    <li>✨ <strong>Steun ons initiatief:</strong> Doe een <a href="donatie.html">donatie</a> en help ons bewustwordingsprojecten mogelijk te maken.</li>
-                    <li>✨ <strong>Blijf op de hoogte:</strong> Schrijf je in voor onze nieuwsbrief en mis geen enkele update.</li>
-                    <li>✨ <strong>Doe actief mee:</strong> Sluit je aan bij onze initiatieven en maak deel uit van de beweging.</li>
-                </ul>
-                <div class="action-buttons">
-                    <a href="donatie.html" class="btn btn-primary">Doneer Nu</a>
-                    <a href="wie-zijn-wij.html" class="btn btn-outline">Meer over Ons</a>
+                <h2 id="steun-ons-heading" class="section-title">Doe mee!</h2>
+                <p>Wil je actief bijdragen aan een inclusieve samenleving en de betekenis van Keti Koti versterken? Sluit je aan bij ons!</p>
+                <div class="hero-actions">
+                    <a href="inschrijfformulier.html" class="btn btn-secondary">Word Lid</a>
+                    <a href="contact.html" class="btn btn-outline">Neem Contact Op</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer" role="contentinfo">
-        <div class="footer-content">
-            <div class="footer-grid">
-                <div class="footer-info">
-                    <img src="image/logo-footer.png" alt="PvO Keti Koti Logo" width="100" height="100" loading="lazy">
-                    <p class="footer-copyright">&copy; <span id="current-year"></span> PvO Keti Koti</p>
-                </div>
-                <div class="footer-newsletter">
-                    <form class="newsletter-form" aria-labelledby="nieuwsbrief-label">
-                        <h3 id="nieuwsbrief-label" class="footer-heading">Nieuwsbrief</h3>
-                        <div class="input-group">
-                            <label for="nieuwsbrief-email" class="visually-hidden">E-mailadres</label>
-                            <input type="email" 
-                                   id="nieuwsbrief-email" 
-                                   class="input-field"
-                                   placeholder="E-mailadres"
-                                   required
-                                   aria-required="true">
-                            <button type="submit" class="btn btn-accent">Inschrijven</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <footer>
+        <p>&copy; 2025 PvO Keti Koti. Alle rechten voorbehouden.</p>
     </footer>
 </body>
 </html>
