@@ -3,55 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PvO Keti Koti - Doneer</title>
+    <title>Doneren & Steun - PvO Keti Koti</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="image/favicon.png">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #fff;
+            color: #000;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+        header, footer {
+            background: #111;
+            padding: 20px;
+            text-align: center;
+        }
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        .nav-links a.active,
+        .nav-links a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+        .section-inner {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #222;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255,255,255,0.1);
+        }
+        h1, h2 {
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Ga direct naar inhoud</a>
+
     <header class="nav-header">
-        <nav>
+        <nav aria-label="Hoofdnavigatie">
             <div class="nav-container">
-                <a href="index.html">
-                    <img src="image/logo.png" alt="PvO Keti Koti Logo" width="150" height="40">
+                <a href="index.html" class="logo-link">
+                    <img src="image/logo.png" alt="PvO Keti Koti Logo" width="50" height="50" loading="lazy">
                 </a>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="wie-zijn-wij.html">Wie Wij Zijn</a></li>
-                    <li><a href="initiatieven.html">Initiatieven</a></li>
-                    <li><a href="keti-koti.html">Keti Koti</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="donatie.html" class="btn btn-primary active">Doneer</a></li>
+                <ul class="nav-links" role="menubar">
+                    <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                    <li role="none"><a href="wie-zijn-wij.html" role="menuitem">Wie Wij Zijn</a></li>
+                    <li role="none"><a href="initiatieven.html" role="menuitem">Initiatieven</a></li>
+                    <li role="none"><a href="keti-koti.html" role="menuitem">Keti Koti</a></li>
+                    <li role="none"><a href="nieuwsbrief.html" role="menuitem">Nieuws & Updates</a></li>
+                    <li role="none"><a href="inschrijfformulier.html" role="menuitem">Lidmaatschap</a></li>
+                    <li role="none"><a href="donatie.html" class="active" role="menuitem">Doneren & Steun</a></li>
+                    <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <main id="main-content" class="donation-page">
-        <section class="hero">
-            <h1 class="donation-heading">Steun PvO Keti Koti</h1>
-            <p>Jouw bijdrage helpt ons Keti Koti structureel te verankeren.</p>
-        </section>
-
+    <main id="main-content">
         <section class="content-section">
-            <h2>Waarom doneren?</h2>
-            <p>Met jouw steun kunnen we:</p>
-            <ul>
-                <li>Bewustwordingscampagnes organiseren.</li>
-                <li>Keti Koti een vast onderdeel maken van de werkcultuur.</li>
-                <li>Educatieve programma's en evenementen ondersteunen.</li>
-            </ul>
-        </section>
-
-        <section class="content-section">
-            <h2>Hoe kun je doneren?</h2>
-            <p>Kies een donatiemethode die bij jou past:</p>
-            <button class="btn btn-donate">Doneer via iDeal</button>
-            <button class="btn btn-donate">Doneer via PayPal</button>
-            <button class="btn btn-donate">Bankoverschrijving</button>
+            <div class="section-inner">
+                <h1 class="section-title">Doneren & Steun</h1>
+                <p>Jouw steun maakt het verschil! Draag bij aan de initiatieven van PvO Keti Koti en help ons om bewustwording en inclusiviteit te bevorderen.</p>
+                
+                <h2>Waarom doneren?</h2>
+                <ul>
+                    <li>✅ Ondersteun educatieve programma’s en workshops.</li>
+                    <li>✅ Help mee bij de organisatie van Keti Koti-herdenkingen.</li>
+                    <li>✅ Draag bij aan culturele evenementen en bewustwordingscampagnes.</li>
+                </ul>
+                
+                <h2>Doneer nu</h2>
+                <p>Elke bijdrage, groot of klein, helpt ons om onze missie voort te zetten.</p>
+                <a href="donatie.html" class="btn btn-secondary">Steun Ons</a>
+            </div>
         </section>
     </main>
 
-    <footer class="footer styled-footer">
-        <p>&copy; 2025 PvO Keti Koti</p>
+    <footer>
+        <p>&copy; 2025 PvO Keti Koti. Alle rechten voorbehouden.</p>
     </footer>
 </body>
 </html>
