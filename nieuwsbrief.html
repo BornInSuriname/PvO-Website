@@ -68,6 +68,22 @@
     </style>
 </head>
 <body>
+<h1>Nieuwsbrief</h1>
+
+<nav class="navbar">
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="wie-zijn-wij.html">Wie zijn wij</a></li>
+        <li><a href="onze-initiatieven.html">Onze Initiatieven</a></li>
+        <li><a href="keti-koti.html">Keti Koti</a></li>
+        <li><a href="nieuwsbrief.html">Nieuws</a></li>
+        <li><a href="inschrijfformulier.html">Lidmaatschap</a></li>
+        <li><a href="donatie.html">Doneren</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
     <a href="#main-content" class="skip-link">Ga direct naar inhoud</a>
 
     <header class="nav-header">
@@ -79,7 +95,7 @@
                 <ul class="nav-links" role="menubar">
                     <li role="none"><a href="index.html" role="menuitem">Home</a></li>
                     <li role="none"><a href="wie-zijn-wij.html" role="menuitem">Wie Wij Zijn</a></li>
-                    <li role="none"><a href="initiatieven.html" role="menuitem">Initiatieven</a></li>
+                    <li role="none"><a href="onze-initiatieven.html" role="menuitem">Initiatieven</a></li>
                     <li role="none"><a href="keti-koti.html" role="menuitem">Keti Koti</a></li>
                     <li role="none"><a href="nieuwsbrief.html" class="active" role="menuitem">Nieuws & Updates</a></li>
                     <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
@@ -111,5 +127,21 @@
     <footer>
         <p>&copy; 2025 PvO Keti Koti. Alle rechten voorbehouden.</p>
     </footer>
+
+<script>
+function toggleMenu() {
+    var nav = document.querySelector('.nav-links');
+    nav.classList.toggle('active');
+}
+</script>
+
+
+<script>
+function toggleMenu() {
+    var nav = document.querySelector('.nav-links');
+    nav.classList.toggle('active');
+}
+</script>
+
 </body>
 </html>
