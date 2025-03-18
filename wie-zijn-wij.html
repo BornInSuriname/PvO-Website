@@ -3,50 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>PvO Keti Koti - Wie Wij Zijn</title>
+    <title>Wie Zijn Wij - PvO Keti Koti</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <script defer src="js/script.js"></script>
+    <link rel="icon" type="image/png" href="image/favicon.png">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #fff;
+            color: #000;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+        header, footer {
+            background: #111;
+            padding: 20px;
+            text-align: center;
+        }
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        .nav-links a.active,
+        .nav-links a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+        .section-inner {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #222;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255,255,255,0.1);
+        }
+        h1, h2 {
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Ga direct naar inhoud</a>
+
     <header class="nav-header">
         <nav aria-label="Hoofdnavigatie">
             <div class="nav-container">
                 <a href="index.html" class="logo-link">
-                    <img src="images/logo.png" alt="PvO Keti Koti Logo" width="150" height="40">
+                    <img src="image/logo.png" alt="PvO Keti Koti Logo" width="50" height="50" loading="lazy">
                 </a>
-                <ul class="nav-links" id="main-navigation">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="wie-zijn-wij.html" class="active">Wie Wij Zijn</a></li>
-                    <li><a href="initiatieven.html">Initiatieven</a></li>
-                    <li><a href="keti-koti.html">Keti Koti</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="donatie.html" class="btn btn-primary">Doneer</a></li>
+                <ul class="nav-links" role="menubar">
+                    <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                    <li role="none"><a href="wie-zijn-wij.html" class="active" role="menuitem" aria-current="page">Wie Wij Zijn</a></li>
+                    <li role="none"><a href="initiatieven.html" role="menuitem">Initiatieven</a></li>
+                    <li role="none"><a href="keti-koti.html" role="menuitem">Keti Koti</a></li>
+                    <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+                    <li role="none"><a href="donatie.html" class="btn btn-primary">Doneer</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <main id="main-content">
-        <section class="hero">
-            <h1>Wie Wij Zijn</h1>
-            <p>Een gedreven team dat werkt aan structurele bewustwording en inclusie.</p>
-        </section>
-
         <section class="content-section">
-            <h2>Onze Missie</h2>
-            <p>PvO Keti Koti zet zich in voor de structurele erkenning van Keti Koti binnen het GVB. Onze doelstellingen:</p>
-            <ul>
-                <li>Het structureel opnemen van Keti Koti in het inclusiviteitsbeleid.</li>
-                <li>Het bevorderen van bewustwording en educatie binnen het GVB.</li>
-                <li>Een duurzame verankering van Keti Koti in de werkcultuur.</li>
-            </ul>
+            <div class="section-inner">
+                <h1 class="section-title">Wie zijn wij en waarvoor staan we?</h1>
+                <p>PvO Keti Koti, opgericht door Ruviljo Esajas, is een comité binnen het GVB dat zich inzet voor de structurele erkenning van het slavernijverleden. We bieden educatie, stimuleren dialoog en organiseren evenementen om bewustwording te vergroten en inclusiviteit te bevorderen.</p>
+
+                <h2>Ons Bestuur</h2>
+                <ul>
+                    <li><strong>Mariska Ravenberg-Reemnet</strong>: Strategische planning en representatie</li>
+                    <li><strong>Josephin Schmeltz</strong>: Communicatie en documentatie</li>
+                    <li><strong>Marvin Rathling</strong>: Organisatie culturele activiteiten</li>
+                    <li><strong>Fabian Vroom</strong>: Zichtbaarheid comité</li>
+                </ul>
+
+                <h2>Onze kernwaarden</h2>
+                <ul>
+                    <li>✅ <strong>Erkenning:</strong> Het zichtbaar maken van het slavernijverleden.</li>
+                    <li>✅ <strong>Respect:</strong> Waardering en respect voor iedereens verhaal.</li>
+                    <li>✅ <strong>Inclusiviteit:</strong> Actieve inzet voor een inclusieve cultuur binnen en buiten het GVB.</li>
+                </ul>
+
+                <p>Samen streven we naar een toekomst waarin het verleden niet vergeten wordt, maar dient als basis voor groei en begrip.</p>
+            </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2025 PvO Keti Koti</p>
+    <footer>
+        <p>&copy; 2025 PvO Keti Koti. Alle rechten voorbehouden.</p>
     </footer>
 </body>
 </html>
