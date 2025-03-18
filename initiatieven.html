@@ -3,118 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>PvO Keti Koti - Initiatieven</title>
+    <title>Onze Initiatieven - PvO Keti Koti</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="image/favicon.png">
-    <script defer src="js/script.js"></script>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #fff;
+            color: #000;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+        header, footer {
+            background: #111;
+            padding: 20px;
+            text-align: center;
+        }
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        .nav-links a.active,
+        .nav-links a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+        .section-inner {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #222;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255,255,255,0.1);
+        }
+        h1, h2 {
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Ga direct naar inhoud</a>
+
     <header class="nav-header">
         <nav aria-label="Hoofdnavigatie">
             <div class="nav-container">
                 <a href="index.html" class="logo-link">
-                    <img src="image/logo.png" alt="PvO Keti Koti Logo" width="150" height="40">
+                    <img src="image/logo.png" alt="PvO Keti Koti Logo" width="50" height="50" loading="lazy">
                 </a>
-                <button class="menu-toggle" 
-                        aria-label="Menu openen/sluiten" 
-                        aria-expanded="false"
-                        aria-controls="main-navigation">
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
-                </button>
-                <ul class="nav-links" id="main-navigation">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="wie-zijn-wij.html" class="nav-link">Wie Wij Zijn</a></li>
-                    <li><a href="initiatieven.html" class="nav-link active" aria-current="page">Initiatieven</a></li>
-                    <li><a href="keti-koti.html" class="nav-link">Keti Koti</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li><a href="donatie.html" class="cta-button btn-primary">Doneer</a></li>
+                <ul class="nav-links" role="menubar">
+                    <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                    <li role="none"><a href="wie-zijn-wij.html" role="menuitem">Wie Wij Zijn</a></li>
+                    <li role="none"><a href="initiatieven.html" class="active" role="menuitem">Initiatieven</a></li>
+                    <li role="none"><a href="keti-koti.html" role="menuitem">Keti Koti</a></li>
+                    <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+                    <li role="none"><a href="donatie.html" class="btn btn-primary">Doneer</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <main id="main-content">
-        <section class="hero" aria-labelledby="initiatieven-heading">
-            <div class="hero-content">
-                <h1 id="initiatieven-heading">Onze Initiatieven</h1>
-                <p class="hero-text">Concrete acties voor blijvende verandering</p>
-            </div>
-        </section>
-
-        <section class="content-section" aria-labelledby="initiatieven-lijst">
+        <section class="content-section">
             <div class="section-inner">
-                <h2 id="initiatieven-lijst" class="section-title">Onze Initiatieven - Structurele Verandering voor de Toekomst</h2>
-                <p>Bij <strong>PvO Keti Koti</strong> zetten we ons in voor de structurele erkenning van Keti Koti binnen het GVB. Onze initiatieven bevorderen inclusiviteit, bewustwording en verbinding en zorgen ervoor dat Keti Koti niet slechts een herdenkingsmoment blijft, maar een blijvend onderdeel wordt van de werkcultuur en maatschappij.</p>
-
-                <div class="initiative-grid">
-                    <article class="initiative-card highlight-box">
-                        <h3>✅ Structurele Verankering</h3>
-                        <p>Wij werken aan een toekomst waarin Keti Koti een integraal onderdeel wordt van het inclusiviteitsbeleid binnen het GVB. Dit houdt in:</p>
-                        <ul class="initiative-details">
-                            <li>De structurele opname van Keti Koti in de bedrijfscultuur als een jaarlijks erkend moment.</li>
-                            <li>Actieve bewustwording over het slavernijverleden en de doorwerking ervan in de maatschappij.</li>
-                            <li>Samenwerking met het management om inclusiviteit en diversiteit duurzaam te verankeren.</li>
-                        </ul>
-                    </article>
-
-                    <article class="initiative-card highlight-box">
-                        <h3>🎉 Herdenking en Viering</h3>
-                        <p>Keti Koti op 1 juli is een belangrijk moment van reflectie, erkenning en verbinding. Binnen het GVB organiseren we:</p>
-                        <ul class="initiative-details">
-                            <li>Een officiële herdenkingsceremonie waarin stil wordt gestaan bij de impact van het slavernijverleden.</li>
-                            <li>Interne evenementen en workshops om medewerkers bewust te maken van de geschiedenis en betekenis van Keti Koti.</li>
-                            <li>Culturele en educatieve activiteiten die de saamhorigheid en verbondenheid binnen het GVB versterken.</li>
-                        </ul>
-                    </article>
-
-                    <article class="initiative-card highlight-box">
-                        <h3>📢 Bewustwordingscampagnes</h3>
-                        <p>Bewustwording is de sleutel tot verandering. Daarom zetten wij ons in voor:</p>
-                        <ul class="initiative-details">
-                            <li>Interne communicatiecampagnes die het belang van Keti Koti onder de aandacht brengen.</li>
-                            <li>Educatieve materialen en presentaties over de geschiedenis en de impact van het slavernijverleden.</li>
-                            <li>Persoonlijke verhalen en getuigenissen om de boodschap levend en tastbaar te maken.</li>
-                            <li>Medewerkersbetrokkenheid door middel van dialoog en discussies binnen verschillende teams en afdelingen.</li>
-                        </ul>
-                    </article>
-
-                    <article class="initiative-card highlight-box">
-                        <h3>🤝 Samenwerking binnen het GVB</h3>
-                        <p>Inclusie en diversiteit zijn een gezamenlijke verantwoordelijkheid. Wij werken daarom nauw samen met:</p>
-                        <ul class="initiative-details">
-                            <li>Verschillende afdelingen en teams binnen het GVB om draagvlak te creëren.</li>
-                            <li>HR en beleidsmakers om inclusiviteit structureel op de agenda te zetten.</li>
-                            <li>Duurzame initiatieven waarbij medewerkers actief worden betrokken bij bewustwordingsprogramma’s.</li>
-                        </ul>
-                    </article>
-
-                    <article class="initiative-card highlight-box accent">
-                        <h3>🚀 Toekomstvisie en Uitbreiding</h3>
-                        <p>Onze missie reikt verder dan het GVB alleen. Wij zetten ons in voor:</p>
-                        <ul class="initiative-details">
-                            <li>Vastlegging van Keti Koti als vast onderdeel van het inclusiviteitsbeleid binnen het GVB.</li>
-                            <li>Een bredere uitrol naar andere organisaties en sectoren om bewustwording en erkenning te stimuleren.</li>
-                            <li>Samenwerkingen met externe partijen en maatschappelijke organisaties om de impact van Keti Koti te vergroten.</li>
-                            <li>Een langdurige beweging richting structurele erkenning van het slavernijverleden in de Nederlandse samenleving.</li>
-                        </ul>
-                    </article>
-                </div>
+                <h1 class="section-title">Onze Initiatieven</h1>
+                <h2>Concrete stappen naar bewustzijn en verbinding</h2>
+                <h3>Wat doen wij concreet?</h3>
+                <ul>
+                    <li>🎭 <strong>Herdenkingen en culturele evenementen:</strong> Het herdenken en vieren van Keti Koti met betekenisvolle activiteiten.</li>
+                    <li>🚋 <strong>Zichtbare initiatieven:</strong> Thematische bestickering van trams en andere uitingen binnen het GVB.</li>
+                    <li>🍽 <strong>Traditionele lekkernijen:</strong> Uitreiken van Surinaamse en Antilliaanse hapjes als symbool van verbinding.</li>
+                    <li>📢 <strong>Actieve communicatie en campagnes:</strong> Bewustwordingscampagnes binnen en buiten het GVB.</li>
+                </ul>
+                <p>Onze initiatieven zijn erop gericht om bewustzijn te creëren en verbinding te stimuleren binnen onze organisatie en gemeenschap. Samen zorgen we ervoor dat de betekenis van Keti Koti blijvend zichtbaar en voelbaar is.</p>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-grid">
-                <div class="footer-info">
-                    <img src="image/logo-footer.png" alt="PvO Keti Koti Logo" width="200" height="60">
-                    <p>&copy; 2025 PvO Keti Koti</p>
-                </div>
-            </div>
-        </div>
+    <footer>
+        <p>&copy; 2025 PvO Keti Koti. Alle rechten voorbehouden.</p>
     </footer>
 </body>
 </html>
