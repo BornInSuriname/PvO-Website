@@ -1,70 +1,117 @@
-<section class="content-section">
-    <h2>Schrijf je in voor onze activiteiten</h2>
-    
-    <form id="inschrijfForm" class="inschrijf-formulier">
-        <div class="form-grid">
-            <!-- Persoonlijke gegevens -->
-            <div class="form-group">
-                <label for="naam">Volledige naam *</label>
-                <input type="text" id="naam" name="naam" required>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lidmaatschap - PvO Keti Koti</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="image/favicon.png">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #fff;
+            color: #000;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+        header, footer {
+            background: #111;
+            padding: 20px;
+            text-align: center;
+        }
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        .nav-links a.active,
+        .nav-links a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+        .section-inner {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #222;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255,255,255,0.1);
+        }
+        h1, h2 {
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Ga direct naar inhoud</a>
+
+    <header class="nav-header">
+        <nav aria-label="Hoofdnavigatie">
+            <div class="nav-container">
+                <a href="index.html" class="logo-link">
+                    <img src="image/logo.png" alt="PvO Keti Koti Logo" width="50" height="50" loading="lazy">
+                </a>
+                <ul class="nav-links" role="menubar">
+                    <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                    <li role="none"><a href="wie-zijn-wij.html" role="menuitem">Wie Wij Zijn</a></li>
+                    <li role="none"><a href="initiatieven.html" role="menuitem">Initiatieven</a></li>
+                    <li role="none"><a href="keti-koti.html" role="menuitem">Keti Koti</a></li>
+                    <li role="none"><a href="nieuwsbrief.html" role="menuitem">Nieuws & Updates</a></li>
+                    <li role="none"><a href="inschrijfformulier.html" class="active" role="menuitem">Lidmaatschap</a></li>
+                    <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+                    <li role="none"><a href="donatie.html" class="btn btn-primary">Doneer</a></li>
+                </ul>
             </div>
+        </nav>
+    </header>
 
-            <div class="form-group">
-                <label for="email">E-mailadres *</label>
-                <input type="email" id="email" name="email" required>
+    <main id="main-content">
+        <section class="content-section">
+            <div class="section-inner">
+                <h1 class="section-title">Lidmaatschap</h1>
+                <p>Word lid van PvO Keti Koti en draag bij aan onze missie voor bewustwording en inclusiviteit.</p>
+                
+                <h2>Waarom lid worden?</h2>
+                <ul>
+                    <li>✅ Toegang tot exclusieve evenementen en educatieve sessies.</li>
+                    <li>✅ Ondersteun de structurele verankering van Keti Koti binnen het GVB.</li>
+                    <li>✅ Draag bij aan een inclusieve werk- en leefomgeving.</li>
+                </ul>
+                
+                <h2>Schrijf je in</h2>
+                <p>Voor slechts €60 per jaar word je lid en maak je een verschil!</p>
+                <a href="inschrijfformulier.html" class="btn btn-secondary">Meld je nu aan</a>
             </div>
+        </section>
+    </main>
 
-            <div class="form-group">
-                <label for="telefoon">Telefoonnummer</label>
-                <input type="tel" id="telefoon" name="telefoon">
-            </div>
-
-            <!-- Activiteiten selectie -->
-            <div class="form-group">
-                <label for="activiteit">Activiteit *</label>
-                <select id="activiteit" name="activiteit" required>
-                    <option value="">Kies een activiteit</option>
-                    <option value="herdenking">Actief helpen met de organisatie</option>
-                    <option value="workshop">Versiering eindpunt</option>
-                    <option value="vrijwilliger">Bereiding traditionele hapjes</option>
-                </select>
-            </div>
-
-            <!-- Extra informatie -->
-            <div class="form-group full-width">
-                <label for="opmerkingen">Speciale wensen/dieetwensen</label>
-                <textarea id="opmerkingen" rows="4"></textarea>
-            </div>
-
-            <!-- Checkboxes -->
-            <fieldset class="form-group full-width">
-                <legend>Hoe heb je over ons gehoord?</legend>
-                <div class="checkbox-group">
-                    <label>
-                        <input type="checkbox" name="bron" value="collega"> Collega
-                    </label>
-                    <label>
-                        <input type="checkbox" name="bron" value="website"> Website
-                    </label>
-                    <label>
-                        <input type="checkbox" name="bron" value="social"> Social Media
-                    </label>
-                </div>
-            </fieldset>
-
-            <!-- Privacy -->
-            <div class="form-group full-width">
-                <label class="privacy-label">
-                    <input type="checkbox" required>
-                    Ik ga akkoord met de <a href="/privacy" target="_blank">privacyvoorwaarden</a> *
-                </label>
-            </div>
-        </div>
-
-        <button type="submit" class="cta-button">Inschrijven →</button>
-    </form>
-
-    <div id="bevestiging" class="bevestigingsmelding" hidden>
-        <p>🎉 Bedankt voor je inschrijving! We hebben een bevestiging gestuurd naar je e-mailadres.</p>
-    </div>
-</section>
+    <footer>
+        <p>&copy; 2025 PvO Keti Koti. Alle rechten voorbehouden.</p>
+    </footer>
+</body>
+</html>
