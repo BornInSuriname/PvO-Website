@@ -2,103 +2,114 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>PvO Keti Koti Nieuwsbrief</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nieuws & Updates - PvO Keti Koti</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="image/favicon.png">
     <style>
-        /* Inline CSS voor email compatibiliteit */
         body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            background-color: #EFEBE9;
         }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #fff;
+            color: #000;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
         }
-        .header {
-            background: #3E2723;
-            padding: 2rem;
+        .skip-link:focus {
+            top: 0;
+        }
+        header, footer {
+            background: #111;
+            padding: 20px;
             text-align: center;
         }
-        .header img {
-            max-width: 200px;
-            height: auto;
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
         }
-        .content {
-            padding: 2rem;
-            color: #2D2D2D;
-        }
-        .cta-button {
-            display: inline-block;
-            background: #8D6E63;
-            color: white !important;
-            padding: 12px 25px;
+        .nav-links a {
+            color: #fff;
             text-decoration: none;
-            border-radius: 25px;
-            margin: 1rem 0;
+            padding: 5px 10px;
         }
-        .footer {
-            background: #3E2723;
-            color: white;
-            padding: 1.5rem;
-            text-align: center;
-            font-size: 0.9rem;
+        .nav-links a.active,
+        .nav-links a:hover {
+            background: #555;
+            border-radius: 5px;
         }
-        .event-card {
-            border-left: 4px solid #8D6E63;
-            padding: 1rem;
-            margin: 1.5rem 0;
-            background: #EFEBE9;
+        .section-inner {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #222;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255,255,255,0.1);
+        }
+        h1, h2 {
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+        }
+        ul {
+            padding-left: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <img src="image/Logo.png" alt="PvO Keti Koti Logo">
-        </div>
+    <a href="#main-content" class="skip-link">Ga direct naar inhoud</a>
 
-        <div class="content">
-            <h1>Nieuwsbrief Juli 2024</h1>
-            
-            <div class="event-card">
-                <h2>Keti Koti Herdenking Successvol Voltooid</h2>
-                <p>📅 1 juli 2023 | 🕒 14:00-17:00 uur<br>
-                Dankzij jullie betrokkenheid was onze herdenking een groot succes. Bekijk de <a href="[FOTOLINK]">foto's</a> en lees het <a href="[VERSLAGLINK]">verslag</a>.</p>
+    <header class="nav-header">
+        <nav aria-label="Hoofdnavigatie">
+            <div class="nav-container">
+                <a href="index.html" class="logo-link">
+                    <img src="image/logo.png" alt="PvO Keti Koti Logo" width="50" height="50" loading="lazy">
+                </a>
+                <ul class="nav-links" role="menubar">
+                    <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                    <li role="none"><a href="wie-zijn-wij.html" role="menuitem">Wie Wij Zijn</a></li>
+                    <li role="none"><a href="initiatieven.html" role="menuitem">Initiatieven</a></li>
+                    <li role="none"><a href="keti-koti.html" role="menuitem">Keti Koti</a></li>
+                    <li role="none"><a href="nieuwsbrief.html" class="active" role="menuitem">Nieuws & Updates</a></li>
+                    <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+                    <li role="none"><a href="donatie.html" class="btn btn-primary">Doneer</a></li>
+                </ul>
             </div>
+        </nav>
+    </header>
 
-            <h2>Komende Activiteiten</h2>
-            <ul>
-                <li>24 juni: Gesprek GVB bestuur</li>
-                <li>15 april: Algemeen Leden Vergadering</li>
-                <li>1 juli: Keti Koti Herdenking</li>
-            </ul>
-
-            <a href="inschrijfformulier.html" class="cta-button">Meld je nu aan</a>
-
-            <h2>Onze Impact in Cijfers</h2>
-            <div style="background: #EFEBE9; padding: 1rem; border-radius: 8px;">
-                <p>✅ 500+ deelnemers aan herdenking<br>
-                ✅ 75% meer bewustwording gemeten<br>
-                ✅ 3 nieuwe partnerschappen</p>
+    <main id="main-content">
+        <section class="content-section">
+            <div class="section-inner">
+                <h1 class="section-title">Nieuws & Updates</h1>
+                <p>Blijf op de hoogte van het laatste nieuws, evenementen en initiatieven van PvO Keti Koti.</p>
+                
+                <h2>Laatste updates</h2>
+                <ul>
+                    <li>📢 <strong>Nieuwe educatieve lezingen:</strong> PvO Keti Koti organiseert een reeks lezingen over de impact van het slavernijverleden.</li>
+                    <li>🎭 <strong>Keti Koti Viering 2025:</strong> Bekijk het programma en doe mee aan onze herdenkingsceremonie.</li>
+                    <li>🚋 <strong>Thematische trambestickering:</strong> Onze speciale Keti Koti-tram rijdt door Amsterdam.</li>
+                </ul>
+                
+                <p>Wil je altijd als eerste op de hoogte zijn? Meld je aan voor onze nieuwsbrief en mis niets van onze activiteiten.</p>
+                <a href="inschrijfformulier.html" class="btn btn-secondary">Schrijf je in</a>
             </div>
+        </section>
+    </main>
 
-            <h2>Steun Ons Werk</h2>
-            <p>Help ons Keti Koti blijvend te verankeren:</p>
-            <a href="https://tikkie.me/pay/7ectjsqmdggg5cd56vgn" class="cta-button">Word Donateur</a>
-        </div>
-
-        <div class="footer">
-            <p>PvO Keti Koti | GVB Kantoor Amsterdam<br>
-            📧 <a href="mailto:info@pvoketikoti.nl" style="color: white;">info@pvoketikoti.nl</a><br>
-            📱 020-123 45 67</p>
-            <p style="font-size: 0.8rem; margin-top: 1rem;">
-                <a href="[AFMELDLINK]" style="color: white;">Afmelden</a> | 
-                <a href="[VOORKEURENLINK]" style="color: white;">Voorkeuren aanpassen</a>
-            </p>
-        </div>
-    </div>
+    <footer>
+        <p>&copy; 2025 PvO Keti Koti. Alle rechten voorbehouden.</p>
+    </footer>
 </body>
 </html>
