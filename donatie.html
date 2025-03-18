@@ -3,79 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Doneren - PvO Keti Koti</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="image/favicon.png">
-    <script defer src="script.js"></script>
+    <title>PvO Keti Koti - Doneer</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Ga direct naar inhoud</a>
-    
     <header class="nav-header">
-        <nav aria-label="Hoofdnavigatie">
-            <div class="nav-container">
-                <a href="index.html" class="logo-link">
-                    <img src="image/logo.png" alt="PvO Keti Koti Logo" class="logo-img" loading="lazy">
-                </a>
-                <button class="menu-toggle" aria-label="Menu openen/sluiten" aria-expanded="false">
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="wie-zijn-wij.html" class="nav-link">Wie Wij Zijn</a></li>
-                    <li><a href="initiatieven.html" class="nav-link">Initiatieven</a></li>
-                    <li><a href="keti-koti.html" class="nav-link">Keti Koti</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li><a href="doneren.html" class="btn btn-primary">Doneer</a></li>
-                </ul>
-            </div>
+        <nav>
+            <a href="index.html"><img src="images/logo.png" alt="PvO Keti Koti Logo"></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="wie-zijn-wij.html">Wie Wij Zijn</a></li>
+                <li><a href="initiatieven.html">Initiatieven</a></li>
+                <li><a href="keti-koti.html">Keti Koti</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donatie.html" class="active btn btn-primary">Doneer</a></li>
+            </ul>
         </nav>
     </header>
 
     <main id="main-content">
-        <section class="hero" aria-labelledby="donatie-heading">
-            <div class="hero-content">
-                <h1 id="donatie-heading">Steun Ons Werk</h1>
-                <p class="hero-text">Draag bij aan een inclusieve toekomst</p>
-            </div>
-        </section>
-
-        <section class="content-section" aria-labelledby="donatie-opties">
-            <div class="section-inner">
-                <div class="donatie-grid">
-                    <article class="donatie-optie highlight-box">
-                        <h3>Eenmalige donatie</h3>
-                        <p>Steun ons met een eenmalige bijdrage via Tikkie.</p>
-                        <a href="https://tikkie.me/pay/7ectjsqmdggg5cd56vgn" target="_blank" class="btn btn-accent">Doneer nu</a>
-                    </article>
-                    <article class="donatie-optie highlight-box">
-                        <h3>Word lid</h3>
-                        <p>Sluit je aan bij onze gemeenschap en steun ons structureel.</p>
-                        <a href="inschrijfformulier.html" class="btn btn-secondary">Aanmelden</a>
-                    </article>
-                </div>
-            </div>
+        <section class="hero">
+            <h1>Steun PvO Keti Koti</h1>
+            <p>Jouw bijdrage helpt ons Keti Koti structureel te verankeren.</p>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-grid">
-                <div class="footer-info">
-                    <img src="image/logo-footer.png" alt="PvO Keti Koti Logo" class="logo-img" loading="lazy">
-                    <p class="footer-copyright">&copy; <span id="current-year"></span> PvO Keti Koti</p>
-                </div>
-            </div>
-        </div>
+        <p>&copy; 2025 PvO Keti Koti</p>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("current-year").textContent = new Date().getFullYear();
-        });
-    </script>
 </body>
 </html>
