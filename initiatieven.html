@@ -10,8 +10,32 @@
     <script defer src="js/script.js"></script>
 </head>
 <body>
-    <!-- Vergelijkbare header als contact.html -->
-    
+    <header class="nav-header">
+        <nav aria-label="Hoofdnavigatie">
+            <div class="nav-container">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.png" alt="PvO Keti Koti Logo" width="150" height="40">
+                </a>
+                <button class="menu-toggle" 
+                        aria-label="Menu openen/sluiten" 
+                        aria-expanded="false"
+                        aria-controls="main-navigation">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </button>
+                <ul class="nav-links" id="main-navigation">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="wie-zijn-wij.html" class="nav-link">Wie Wij Zijn</a></li>
+                    <li><a href="initiatieven.html" class="nav-link active" aria-current="page">Initiatieven</a></li>
+                    <li><a href="keti-koti.html" class="nav-link">Keti Koti</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="donatie.html" class="cta-button btn-primary">Doneer</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
     <main id="main-content">
         <section class="hero" aria-labelledby="initiatieven-heading">
             <div class="hero-content">
@@ -49,43 +73,4 @@
                     <article class="initiative-card highlight-box">
                         <h3>📢 Bewustwordingscampagnes</h3>
                         <ul class="initiative-details">
-                            <li>Interne communicatie over de betekenis van Keti Koti</li>
-                            <li>Educatieve materialen en presentaties</li>
-                            <li>Persoonlijke verhalen en medewerkersbetrokkenheid</li>
-                        </ul>
-                        <a href="#" class="btn btn-secondary">Meer info</a>
-                    </article>
-
-                    <article class="initiative-card highlight-box">
-                        <h3>🤝 Samenwerking binnen het GVB</h3>
-                        <ul class="initiative-details">
-                            <li>Afstemming met afdelingen en beleidsmakers</li>
-                            <li>Actieve medewerkersparticipatie</li>
-                            <li>Duurzame implementatie van inclusiviteit</li>
-                        </ul>
-                        <a href="#" class="btn btn-secondary">Meer info</a>
-                    </article>
-
-                    <article class="initiative-card highlight-box accent">
-                        <h3>🚀 Toekomstvisie en Uitbreiding</h3>
-                        <ul class="initiative-details">
-                            <li>Vastlegging van Keti Koti in het officiële beleid</li>
-                            <li>Uitbreiding naar andere organisaties en sectoren</li>
-                            <li>Landelijke erkenning en maatschappelijke impact</li>
-                        </ul>
-                        <a href="#" class="btn btn-secondary">Meer info</a>
-                    </article>
-                </div>
-
-                <p class="closing-statement">Met deze initiatieven draagt <strong>PvO Keti Koti</strong> bij aan een toekomst waarin bewustwording, inclusiviteit en respect een vast onderdeel zijn van de werkcultuur en samenleving.</p>
-                <div class="action-buttons">
-                    <a href="wie-zijn-wij.html" class="btn btn-primary">Lees meer over onze missie</a>
-                    <a href="donatie.html" class="btn btn-outline">Steun ons initiatief</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Zelfde footer als contact.html -->
-</body>
-</html>
+                            <li>Interne communicatie
