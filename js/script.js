@@ -66,9 +66,14 @@ const FormHandler = (() => {
 })();
 
 // Initialisatie
-document.addEventListener('DOMContentLoaded', () => {
-  Navigation.init();
-  FormHandler.init();
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", function() {
+        navLinks.classList.toggle("active");
+    });
+});
 
   // Dynamisch jaar in footer
   const yearElement = document.getElementById('current-year');
