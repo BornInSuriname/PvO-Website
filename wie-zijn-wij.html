@@ -68,6 +68,22 @@
     </style>
 </head>
 <body>
+<h1>Wie Zijn Wij</h1>
+
+<nav class="navbar">
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="wie-zijn-wij.html">Wie zijn wij</a></li>
+        <li><a href="onze-initiatieven.html">Onze Initiatieven</a></li>
+        <li><a href="keti-koti.html">Keti Koti</a></li>
+        <li><a href="nieuwsbrief.html">Nieuws</a></li>
+        <li><a href="inschrijfformulier.html">Lidmaatschap</a></li>
+        <li><a href="donatie.html">Doneren</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
     <a href="#main-content" class="skip-link">Ga direct naar inhoud</a>
 
     <header class="nav-header">
@@ -85,7 +101,9 @@
                     <li role="none"><a href="donatie.html" class="btn btn-primary">Doneer</a></li>
                 </ul>
             </div>
-        </nav>
+            <a href="inschrijfformulier.html">Inschrijfformulier</a>
+    <a href="nieuwsbrief.html">Nieuwsbrief</a>
+</nav>
     </header>
 
     <main id="main-content">
@@ -117,5 +135,21 @@
     <footer>
         <p>&copy; 2025 PvO Keti Koti. Alle rechten voorbehouden.</p>
     </footer>
+
+<script>
+function toggleMenu() {
+    var nav = document.querySelector('.nav-links');
+    nav.classList.toggle('active');
+}
+</script>
+
+
+<script>
+function toggleMenu() {
+    var nav = document.querySelector('.nav-links');
+    nav.classList.toggle('active');
+}
+</script>
+
 </body>
 </html>
