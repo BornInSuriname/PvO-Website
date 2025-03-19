@@ -5,141 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keti Koti - PvO Keti Koti</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/png" href="image/favicon.png">
-    <style>
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: #fff;
-            color: #000;
-            padding: 8px;
-            z-index: 100;
-            transition: top 0.3s;
-        }
-        .skip-link:focus {
-            top: 0;
-        }
-        header, footer {
-            background: #111;
-            padding: 20px;
-            text-align: center;
-        }
-        .nav-links {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            padding: 5px 10px;
-        }
-        .nav-links a.active,
-        .nav-links a:hover {
-            background: #555;
-            border-radius: 5px;
-        }
-        .section-inner {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background: #222;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(255,255,255,0.1);
-        }
-        h1, h2 {
-            border-bottom: 1px solid #555;
-            padding-bottom: 10px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-    </style>
 </head>
 <body>
-<h1>Keti Koti</h1>
 
-<nav class="navbar">
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="wie-zijn-wij.html">Wie zijn wij</a></li>
-        <li><a href="onze-initiatieven.html">Onze Initiatieven</a></li>
-        <li><a href="keti-koti.html">Keti Koti</a></li>
-        <li><a href="nieuwsbrief.html">Nieuws</a></li>
-        <li><a href="inschrijfformulier.html">Lidmaatschap</a></li>
-        <li><a href="donatie.html">Doneren</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+<header class="nav-header">
+    <nav>
+        <button class="menu-toggle" aria-label="Menu openen">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="wie-zijn-wij.html">Wie zijn wij</a></li>
+            <li><a href="onze-initiatieven.html">Onze Initiatieven</a></li>
+            <li><a href="keti-koti.html" class="active">Keti Koti</a></li>
+            <li><a href="nieuwsbrief.html">Nieuws</a></li>
+            <li><a href="inschrijfformulier.html">Lidmaatschap</a></li>
+            <li><a href="donatie.html" class="btn btn-primary">Doneer</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <a href="#main-content" class="skip-link">Ga direct naar inhoud</a>
+<main>
+    <section>
+        <h1>Wat is Keti Koti?</h1>
+        <p>Keti Koti betekent "Gebroken Ketenen" in het Sranantongo en markeert de afschaffing van de slavernij in Suriname en de Antillen op 1 juli 1863.</p>
 
-    <header class="nav-header">
-        <nav aria-label="Hoofdnavigatie">
-            <div class="nav-container">
-                <a href="index.html" class="logo-link">
-                    <img src="image/logo.png" alt="PvO Keti Koti Logo" width="50" height="50" loading="lazy">
-                </a>
-                <ul class="nav-links" role="menubar">
-                    <li role="none"><a href="index.html" role="menuitem">Home</a></li>
-                    <li role="none"><a href="wie-zijn-wij.html" role="menuitem">Wie Wij Zijn</a></li>
-                    <li role="none"><a href="onze-initiatieven.html" role="menuitem">Onze Initiatieven</a></li>
-                    <li role="none"><a href="keti-koti.html" class="active" role="menuitem">Keti Koti</a></li>
-                    <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
-                    <li role="none"><a href="donatie.html" class="btn btn-primary">Doneer</a></li>
-                </ul>
-            </div>
-            <a href="inschrijfformulier.html">Inschrijfformulier</a>
-    <a href="nieuwsbrief.html">Nieuwsbrief</a>
-</nav>
-    </header>
+        <h2>Waarom herdenken we Keti Koti?</h2>
+        <p>Hoewel de slavernij officieel in 1863 werd afgeschaft, moesten tot slaaf gemaakten in Suriname nog tien jaar doorwerken onder gedwongen contractarbeid. Daarom wordt 1873 vaak als het daadwerkelijke einde van de slavernij gezien.</p>
 
-    <main id="main-content">
-        <section class="content-section">
-            <div class="section-inner">
-                <h1 class="section-title">Wat betekent Keti Koti?</h1>
-                <p>Keti Koti betekent letterlijk 'Verbroken Ketenen' en markeert jaarlijks op 1 juli de afschaffing van de slavernij in Suriname en de Nederlandse Antillen. Het is een dag van herdenking en viering, waarop we stilstaan bij het verleden en bouwen aan een toekomst van gelijkwaardigheid en bewustwording.</p>
-                
-                <h2>Waarom is Keti Koti belangrijk?</h2>
-                <ul>
-                    <li>📜 <strong>Herdenken:</strong> Eerbetoon aan voorouders en reflectie op het slavernijverleden.</li>
-                    <li>🎉 <strong>Viering:</strong> Een viering van vrijheid en culturele verbondenheid.</li>
-                    <li>🧠 <strong>Bewustwording:</strong> Het gesprek openen over de impact van het verleden op het heden.</li>
-                    <li>🤝 <strong>Inclusiviteit:</strong> Samen werken aan een rechtvaardigere samenleving.</li>
-                </ul>
-            </div>
-        </section>
-    </main>
+        <h2>Hoe viert PvO Keti Koti deze dag?</h2>
+        <ul>
+            <li>Het organiseren van evenementen binnen het GVB.</li>
+            <li>Herdenkingsmomenten en optochten.</li>
+            <li>Educatieve campagnes over de geschiedenis van Keti Koti.</li>
+        </ul>
+    </section>
+</main>
 
-    <footer>
-        <p>&copy; 2025 PvO Keti Koti. Alle rechten voorbehouden.</p>
-    </footer>
+<footer>
+    <p>&copy; <span id="current-year"></span> PvO Keti Koti. Alle rechten voorbehouden.</p>
+</footer>
 
+<script src="js/script.js"></script>
 <script>
-function toggleMenu() {
-    var nav = document.querySelector('.nav-links');
-    nav.classList.toggle('active');
-}
-</script>
-
-
-<script>
-function toggleMenu() {
-    var nav = document.querySelector('.nav-links');
-    nav.classList.toggle('active');
-}
+    document.getElementById("current-year").textContent = new Date().getFullYear();
 </script>
 
 </body>
