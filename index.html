@@ -1,96 +1,53 @@
 <!DOCTYPE html>
-<html lang="nl" dir="ltr">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PvO Keti Koti - Herdenken, Vieren, Bewustmaken">
     <title>PvO Keti Koti - Home</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="preload" href="images/kente-bg.jpg" as="image">
-    <script defer src="js/script.js"></script>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Direct naar inhoud</a>
 
-    <header class="nav-header">
-        <nav aria-label="Hoofdnavigatie">
-            <div class="nav-container">
-                <a href="/" class="logo-link">
-                    <img src="images/adinkra-symbol.svg" alt="PvO Keti Koti Logo" width="60" height="60">
-                </a>
-                
-                <button class="menu-toggle" aria-label="Menu">
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
-                </button>
+<header class="nav-header">
+    <nav>
+        <button class="menu-toggle" aria-label="Menu openen">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="wie-zijn-wij.html">Wie zijn wij</a></li>
+            <li><a href="onze-initiatieven.html">Onze Initiatieven</a></li>
+            <li><a href="keti-koti.html">Keti Koti</a></li>
+            <li><a href="nieuwsbrief.html">Nieuws</a></li>
+            <li><a href="inschrijfformulier.html">Lidmaatschap</a></li>
+            <li><a href="donatie.html" class="btn btn-primary">Doneer</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-                <ul class="nav-links" role="menubar">
-                    <li role="none"><a href="#over-ons" class="nav-link" role="menuitem">Over Ons</a></li>
-                    <li role="none"><a href="#initiatieven" class="nav-link" role="menuitem">Initiatieven</a></li>
-                    <li role="none"><a href="#tijdlijn" class="nav-link" role="menuitem">Onze Reis</a></li>
-                    <li role="none"><a href="#doneren" class="nav-link" role="menuitem">Steun Ons</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <main id="main-content">
-        <section class="hero" aria-labelledby="hero-heading">
-            <div class="hero-content">
-                <h1 id="hero-heading">Keti Koti - Verbonden in Vrijheid</h1>
-                <p class="hero-text">Samen bouwen aan bewustzijn en verbinding door educatie en erfgoed</p>
-                <div class="hero-actions">
-                    <a href="#doneren" class="btn btn-accent">Doe Mee</a>
-                    <a href="#initiatieven" class="btn btn-outline">Ontdek Initiatieven</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="over-ons" class="section-dark">
-            <div class="section-inner">
-                <h2>Onze Missie</h2>
-                <div class="cultural-grid">
-                    <div class="grid-item">
-                        <img src="images/tram-actie.jpg" alt="Keti Koti thematram">
-                        <div class="grid-content">
-                            <h3>Educatie door Actie</h3>
-                            <p>Thematrams die onze geschiedenis delen</p>
-                        </div>
-                    </div>
-                    <!-- Meer grid items -->
-                </div>
-            </div>
-        </section>
-
-        <section id="tijdlijn" class="section-light">
-            <div class="section-inner">
-                <h2>Onze Reis</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h3>2023 - Eerste Herdenkingstram</h3>
-                        <p>Start van onze jaarlijkse tramacties</p>
-                    </div>
-                    <!-- Meer tijdlijn items -->
-                </div>
-            </div>
-        </section>
-
-        <section id="doneren" class="section-accent">
-            <div class="section-inner">
-                <h2>Steun Ons Doel</h2>
-                <div class="donation-meter">
-                    <div class="donation-progress"></div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="cultural-footer">
-        <div class="footer-content">
-            <img src="images/adinkra-pattern.svg" alt="Cultureel patroon" class="footer-pattern">
-            <p>&copy; 2024 PvO Keti Koti - Alle rechten voorbehouden</p>
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welkom bij PvO Keti Koti</h1>
+            <p>PvO Keti Koti zet zich in voor de structurele erkenning van het slavernijverleden en bevordert bewustwording binnen het GVB en daarbuiten.</p>
+            <a href="onze-initiatieven.html" class="btn btn-secondary">Bekijk onze initiatieven</a>
         </div>
-    </footer>
+    </section>
+
+    <section class="about">
+        <h2>Over PvO Keti Koti</h2>
+        <p>PvO Keti Koti is een comité binnen het GVB, opgericht door Ruviljo Esajas, met als doel Keti Koti structureel te verankeren binnen het bedrijf en een bredere maatschappelijke dialoog te stimuleren.</p>
+        <a href="wie-zijn-wij.html" class="btn btn-primary">Lees meer</a>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; <span id="current-year"></span> PvO Keti Koti. Alle rechten voorbehouden.</p>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
