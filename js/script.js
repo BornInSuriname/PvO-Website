@@ -59,7 +59,7 @@ const Donation = (() => {
         currentAmount += parseInt(e.target.dataset.amount);
         updateMeter();
         // Hier zou API-call komen
-        console.log(`Donatie van €${e.target.dataset.amount} verwerkt`);
+        
       });
     });
   };
