@@ -1,4 +1,56 @@
+    <?php
+    session_start();
+    if (!isset($_SESSION["csrf_token"])) {
+        $_SESSION["csrf_token"] = bin2hex(random_bytes(32));
+    }
+    ?>
+    
+    
+    <?php
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+    if (!isset($_SESSION["csrf_token"])) {
+        $_SESSION["csrf_token"] = bin2hex(random_bytes(32));
+    }
+    ?>
+    
+    session_start();
+    if (!isset($_SESSION["csrf_token"])) {
+        $_SESSION["csrf_token"] = bin2hex(random_bytes(32));
+    }
+    error_log("CSRF Token gegenereerd: " . $_SESSION["csrf_token"]);
+    ?>
+     session_start(); ?>
 <?php
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (!isset($_POST["csrf_token"]) || $_POST["csrf_token"] !== $_SESSION["csrf_token"]) {
+                die("Ongeldige aanvraag. CSRF-verificatie mislukt.");
+            }
+        }
+        
+
+        if (!isset($_SESSION["csrf_token"])) {
+            $_SESSION["csrf_token"] = bin2hex(random_bytes(32));
+        }
+        
+
+        $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+        $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+        $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
+        if (!$email) {
+            die("Ongeldig e-mailadres.");
+        }
+        
+
+            session_start();
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+                    die("Ongeldige aanvraag.");
+                }
+            }
+            
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
