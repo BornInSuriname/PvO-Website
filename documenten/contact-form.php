@@ -1,23 +1,33 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = htmlspecialchars($_POST["name"]);
-    $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
-    $message = htmlspecialchars($_POST["message"]);
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-    $to = "info@pvoketikoti.nl";
-    $subject = "Nieuw Contactbericht van $name";
-    $headers = "From: $email\r\nReply-To: $email\r\nContent-Type: text/plain; charset=UTF-8";
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
 
-    $email_body = "Naam: $name\n";
-    $email_body .= "E-mail: $email\n";
-    $email_body .= "Bericht:\n$message\n";
+$mail = new PHPMailer(true);
 
-    if (mail($to, $subject, $email_body, $headers)) {
-        echo "Bedankt! Je bericht is verzonden.";
-    } else {
-        echo "Er is een fout opgetreden. Probeer het opnieuw.";
-    }
-} else {
-    echo "Ongeldige aanvraag.";
+try {
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.transip.email'; // SMTP-server van TransIP
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'info@pvoketikoti.nl'; // Jouw TransIP e-mailadres
+    $mail->Password   = 'JOUW_E-MAIL_WACHTWOORD'; // Jouw wachtwoord
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Beveiligde verbinding
+    $mail->Port       = 587;
+
+    $mail->setFrom('info@pvoketikoti.nl', 'PvO Keti Koti');
+    $mail->addAddress('info@pvoketikoti.nl'); // Ontvanger (jijzelf)
+
+    $mail->Subject = 'Nieuw contactbericht van ' . $_POST["name"];
+    $mail->Body    = "Naam: " . $_POST["name"] . "\n"
+                    . "E-mail: " . $_POST["email"] . "\n"
+                    . "Bericht: " . $_POST["message"];
+
+    $mail->send();
+    echo 'Bedankt! Je bericht is verzonden.';
+} catch (Exception $e) {
+    echo "Fout bij verzenden: {$mail->ErrorInfo}";
 }
 ?>
