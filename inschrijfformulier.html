@@ -5,145 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lidmaatschap - PvO Keti Koti</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/png" href="image/favicon.png">
-    <style>
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: #fff;
-            color: #000;
-            padding: 8px;
-            z-index: 100;
-            transition: top 0.3s;
-        }
-        .skip-link:focus {
-            top: 0;
-        }
-        header, footer {
-            background: #111;
-            padding: 20px;
-            text-align: center;
-        }
-        .nav-links {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            padding: 5px 10px;
-        }
-        .nav-links a.active,
-        .nav-links a:hover {
-            background: #555;
-            border-radius: 5px;
-        }
-        .section-inner {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background: #222;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(255,255,255,0.1);
-        }
-        h1, h2 {
-            border-bottom: 1px solid #555;
-            padding-bottom: 10px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-    </style>
 </head>
 <body>
-<h1>Inschrijfformulier</h1>
 
-<nav class="navbar">
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="wie-zijn-wij.html">Wie zijn wij</a></li>
-        <li><a href="onze-initiatieven.html">Onze Initiatieven</a></li>
-        <li><a href="keti-koti.html">Keti Koti</a></li>
-        <li><a href="nieuwsbrief.html">Nieuws</a></li>
-        <li><a href="inschrijfformulier.html">Lidmaatschap</a></li>
-        <li><a href="donatie.html">Doneren</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+<header class="nav-header">
+    <nav>
+        <button class="menu-toggle" aria-label="Menu openen">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="inschrijfformulier.html" class="active">Lidmaatschap</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <a href="#main-content" class="skip-link">Ga direct naar inhoud</a>
+<main>
+    <section>
+        <h1>Word lid van PvO Keti Koti</h1>
+        <p>Wil jij bijdragen aan de herdenking en viering van Keti Koti binnen het GVB? Schrijf je dan nu in als lid!</p>
 
-    <header class="nav-header">
-        <nav aria-label="Hoofdnavigatie">
-            <div class="nav-container">
-                <a href="index.html" class="logo-link">
-                    <img src="image/logo.png" alt="PvO Keti Koti Logo" width="50" height="50" loading="lazy">
-                </a>
-                <ul class="nav-links" role="menubar">
-                    <li role="none"><a href="index.html" role="menuitem">Home</a></li>
-                    <li role="none"><a href="wie-zijn-wij.html" role="menuitem">Wie Wij Zijn</a></li>
-                    <li role="none"><a href="onze-initiatieven.html" role="menuitem">Initiatieven</a></li>
-                    <li role="none"><a href="keti-koti.html" role="menuitem">Keti Koti</a></li>
-                    <li role="none"><a href="nieuwsbrief.html" role="menuitem">Nieuws & Updates</a></li>
-                    <li role="none"><a href="inschrijfformulier.html" class="active" role="menuitem">Lidmaatschap</a></li>
-                    <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
-                    <li role="none"><a href="donatie.html" class="btn btn-primary">Doneer</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+        <form action="#" method="post">
+            <label for="name">Naam:</label>
+            <input type="text" id="name" name="name" required>
 
-    <main id="main-content">
-        <section class="content-section">
-            <div class="section-inner">
-                <h1 class="section-title">Lidmaatschap</h1>
-                <p>Word lid van PvO Keti Koti en draag bij aan onze missie voor bewustwording en inclusiviteit.</p>
-                
-                <h2>Waarom lid worden?</h2>
-                <ul>
-                    <li>✅ Toegang tot exclusieve evenementen en educatieve sessies.</li>
-                    <li>✅ Ondersteun de structurele verankering van Keti Koti binnen het GVB.</li>
-                    <li>✅ Draag bij aan een inclusieve werk- en leefomgeving.</li>
-                </ul>
-                
-                <h2>Schrijf je in</h2>
-                <p>Voor slechts €60 per jaar word je lid en maak je een verschil!</p>
-                <a href="inschrijfformulier.html" class="btn btn-secondary">Meld je nu aan</a>
-            </div>
-        </section>
-    </main>
+            <label for="email">E-mailadres:</label>
+            <input type="email" id="email" name="email" required>
 
-    <footer>
-        <p>&copy; 2025 PvO Keti Koti. Alle rechten voorbehouden.</p>
-    </footer>
+            <button type="submit" class="btn btn-primary">Inschrijven</button>
+        </form>
+    </section>
+</main>
 
-<script>
-function toggleMenu() {
-    var nav = document.querySelector('.nav-links');
-    nav.classList.toggle('active');
-}
-</script>
+<footer>
+    <p>&copy; <span id="current-year"></span> PvO Keti Koti. Alle rechten voorbehouden.</p>
+</footer>
 
-
-<script>
-function toggleMenu() {
-    var nav = document.querySelector('.nav-links');
-    nav.classList.toggle('active');
-}
-</script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
