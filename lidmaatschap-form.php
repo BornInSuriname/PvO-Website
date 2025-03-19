@@ -13,7 +13,7 @@ try {
     $mail->Host       = 'smtp.transip.email';
     $mail->SMTPAuth   = true;
     $mail->Username   = 'info@pvoketikoti.nl';
-    $mail->Password   = 'JOUW_E-MAIL_WACHTWOORD';
+    $mail->Password   = 'Bestuur.PVO25';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
