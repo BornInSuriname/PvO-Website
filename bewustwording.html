@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,32 +7,11 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="image/favicon.png">
 </head>
-    
 <body>
-<h1>Bewustwording</h1>
-
-<nav class="navbar">
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="wie-zijn-wij.html">Wie zijn wij</a></li>
-        <li><a href="onze-initiatieven.html">Onze Initiatieven</a></li>
-        <li><a href="keti-koti.html">Keti Koti</a></li>
-        <li><a href="nieuwsbrief.html">Nieuws</a></li>
-        <li><a href="inschrijfformulier.html">Lidmaatschap</a></li>
-        <li><a href="donatie.html">Doneren</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-
-    <a href="#main-content" class="skip-link">Ga direct naar inhoud</a>
-
     <header class="nav-header">
         <nav aria-label="Hoofdnavigatie">
             <div class="nav-container">
-                <a href="index.html" class="logo-link">
-                    <img src="image/logo.png" alt="PvO Keti Koti Logo" width="50" height="50" loading="lazy">
-                </a>
+                <button class="menu-toggle" aria-label="Menu openen">☰</button>
                 <ul class="nav-links" role="menubar">
                     <li role="none"><a href="index.html" role="menuitem">Home</a></li>
                     <li role="none"><a href="wie-zijn-wij.html" role="menuitem">Wie Wij Zijn</a></li>
@@ -68,13 +46,12 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 PvO Keti Koti. Alle rechten voorbehouden.</p>
+        <p>&copy; <span id="current-year"></span> PvO Keti Koti. Alle rechten voorbehouden.</p>
     </footer>
 
-<script src="js/script.js"></script>
-<script>
-    document.getElementById("current-year").textContent = new Date().getFullYear();
-</script>
-
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
