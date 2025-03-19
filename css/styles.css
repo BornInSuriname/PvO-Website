@@ -98,15 +98,7 @@ body {
 }
 
 /* ========== HERO SECTIE ========== */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 2rem;
-  position: relative;
-  overflow: hidden;
-}
+
 
 .hero::before {
   content: '';
@@ -205,13 +197,9 @@ body {
     transition: right 0.3s ease;
   }
 
-  .nav-links.active {
-    right: 0;
-  }
+  .nav-links
 
-  .hero {
-    min-height: 80vh;
-  }
+  
 }
 
 @media (prefers-reduced-motion: reduce) {
