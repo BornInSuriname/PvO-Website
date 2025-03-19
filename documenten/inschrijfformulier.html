@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lidmaatschap - PvO Keti Koti</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="nav-header">
+    <nav>
+        <button class="menu-toggle" aria-label="Menu openen">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="inschrijfformulier.html" class="active">Lidmaatschap</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h1>Word lid van PvO Keti Koti</h1>
+        <p>Wil jij bijdragen aan de herdenking en viering van Keti Koti binnen het GVB? Schrijf je dan nu in als lid!</p>
+
+        <form action="lidmaatschap-form.php" method="post">
+            <label for="name">Naam:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-mailadres:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Telefoonnummer:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="contribution">Ik wil bijdragen (€5 per maand)</label>
+            <input type="checkbox" id="contribution" name="contribution" required>
+
+            <button type="submit" class="btn btn-primary">Inschrijven</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; <span id="current-year"></span> PvO Keti Koti. Alle rechten voorbehouden.</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
