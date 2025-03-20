@@ -17,7 +17,7 @@
                     <li role="none"><a href="onze-initiatieven.html" role="menuitem">Initiatieven</a></li>
                     <li role="none"><a href="keti-koti.html" role="menuitem">Keti Koti</a></li>
                     <li role="none"><a href="nieuwsbrief.html" role="menuitem">Nieuws & Updates</a></li>
-                    <li role="none"><a href="inschrijfformulier.html"class="active" role="menuitem">Lidmaatschap</a></li>
+                    <li role="none"><a href="inschrijfformulier.html" class="active" role="menuitem">Lidmaatschap</a></li>
                     <li role="none"><a href="donatie.html" role="menuitem">Doneren & Steun</a></li>
                     <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
                     <li role="none"><a href="bewustwording.html" role="menuitem">Educatie & Bewustwording</a></li>
@@ -29,4 +29,48 @@
     <main>
         <section>
             <h1>Word lid van PvO Keti Koti</h1>
-            <p>Wil jij bijdragen aan de herdenking en viering van Keti Koti binnen het GVB? Schrijf je dan nu in als lid
+            <p>
+                Wil jij actief bijdragen aan de herdenking en viering van Keti Koti binnen het GVB? PvO Keti Koti zet zich in voor bewustwording, zichtbaarheid en erkenning van ons gezamenlijke slavernijverleden.
+            </p>
+            <p>
+                Als lid kun je rekenen op:
+            </p>
+            <ul>
+                <li>Actieve deelname aan bijeenkomsten en herdenkingen.</li>
+                <li>Meehelpen met het organiseren van initiatieven en evenementen.</li>
+                <li>Het ontvangen van exclusieve updates en nieuwsbrieven.</li>
+                <li>Toegang tot informatieve sessies.</li>
+                <li>Een netwerk van betrokken collega’s binnen het GVB.</li>
+            </ul>
+            <p>
+                Vul hieronder je gegevens in en maak vandaag nog het verschil. Samen werken we aan een inclusieve toekomst!
+            </p>
+
+            <form action="lidmaatschap-form.php" method="post">
+                <label for="naam">Volledige naam:</label>
+                <input type="text" id="naam" name="naam" required>
+
+                <label for="email">E-mailadres:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefoon">Telefoonnummer:</label>
+                <input type="tel" id="telefoon" name="telefoon">
+
+                <label for="bericht">Motivatie (optioneel):</label>
+                <textarea id="bericht" name="bericht"></textarea>
+
+                <button type="submit" class="btn btn-primary">Word lid</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> PvO Keti Koti. Alle rechten voorbehouden.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
