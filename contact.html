@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - PvO Keti Koti</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .contact-buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .contact-buttons a {
+            text-decoration: none;
+            padding: 10px 15px;
+            color: white;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .email-btn {
+            background-color: #007BFF;
+        }
+        .whatsapp-btn {
+            background-color: #25D366;
+        }
+    </style>
 </head>
 <body>
     <header class="nav-header">
@@ -19,7 +39,7 @@
                     <li role="none"><a href="nieuwsbrief.html" role="menuitem">Nieuws & Updates</a></li>
                     <li role="none"><a href="inschrijfformulier.html" role="menuitem">Lidmaatschap</a></li>
                     <li role="none"><a href="donatie.html" role="menuitem">Doneren & Steun</a></li>
-                    <li role="none"><a href="contact.html"class="active" role="menuitem">Contact</a></li>
+                    <li role="none"><a href="contact.html" class="active" role="menuitem">Contact</a></li>
                     <li role="none"><a href="bewustwording.html" role="menuitem">Educatie & Bewustwording</a></li>
                 </ul>
             </div>
@@ -28,8 +48,8 @@
 
     <main>
         <section>
-            <h1>Contact</h1>
-            <p>Heb je vragen of wil je met ons in gesprek? Vul onderstaand formulier in en we nemen zo snel mogelijk contact met je op.</p>
+            <h1>Neem contact met ons op</h1>
+            <p>Heb je vragen, ideeën, opmerkingen of wil je samenwerken met PvO Keti Koti? We horen graag van je! Vul onderstaand formulier in en wij nemen zo spoedig mogelijk contact met je op.</p>
 
             <form action="contact-form.php" method="post">
                 <label for="name">Naam:</label>
@@ -38,11 +58,26 @@
                 <label for="email">E-mailadres:</label>
                 <input type="email" id="email" name="email" required>
 
-                <label for="message">Bericht:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <label for="telefoon">Telefoonnummer (optioneel):</label>
+                <input type="tel" id="telefoon" name="telefoon">
+
+                <label for="subject">Onderwerp:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Jouw bericht:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
 
                 <button type="submit" class="btn btn-primary">Verstuur bericht</button>
             </form>
+
+            <div class="contact-buttons">
+                <a href="mailto:info@pvoketikoti.nl" class="email-btn">📧 E-mail ons</a>
+                <a href="https://wa.me/31612345678" class="whatsapp-btn" target="_blank">💬 WhatsApp ons</a>
+            </div>
+            <p>
+                Wij streven ernaar om binnen 48 uur op alle vragen en verzoeken te reageren. 
+                Je bent ook van harte welkom om suggesties te geven over hoe we onze initiatieven kunnen verbeteren. Jouw betrokkenheid helpt ons om onze missie van bewustwording en erkenning nog beter uit te voeren.
+            </p>
         </section>
     </main>
 
