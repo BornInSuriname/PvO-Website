@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lidmaatschap - PvO Keti Koti</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .form-btn {
+            text-decoration: none;
+            padding: 12px 20px;
+            color: white;
+            background-color: #FF5722;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .form-btn:hover {
+            background-color: #E64A19;
+        }
+    </style>
 </head>
 <body>
     <header class="nav-header">
@@ -30,7 +45,7 @@
         <section>
             <h1>Word lid van PvO Keti Koti</h1>
             <p>
-                Wil jij actief bijdragen aan de herdenking en viering van Keti Koti binnen het GVB? PvO Keti Koti zet zich in voor bewustwording, zichtbaarheid en erkenning van ons gezamenlijke slavernijverleden.
+                Wil jij actief bijdragen aan de herdenking van Keti Koti binnen het GVB? PvO Keti Koti zet zich in voor bewustwording, zichtbaarheid en erkenning van ons gezamenlijke slavernijverleden.
             </p>
             <p>
                 Als lid kun je rekenen op:
@@ -43,24 +58,11 @@
                 <li>Een netwerk van betrokken collega’s binnen het GVB.</li>
             </ul>
             <p>
-                Vul hieronder je gegevens in en maak vandaag nog het verschil. Samen werken we aan een inclusieve toekomst!
+                Klik op de onderstaande knop om je in te schrijven als lid van PvO Keti Koti. Samen werken we aan een inclusieve toekomst!
             </p>
 
-            <form action="lidmaatschap-form.php" method="post">
-                <label for="naam">Volledige naam:</label>
-                <input type="text" id="naam" name="naam" required>
-
-                <label for="email">E-mailadres:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="telefoon">Telefoonnummer:</label>
-                <input type="tel" id="telefoon" name="telefoon">
-
-                <label for="bericht">Motivatie (optioneel):</label>
-                <textarea id="bericht" name="bericht"></textarea>
-
-                <button type="submit" class="btn btn-primary">Word lid</button>
-            </form>
+            <!-- Knop naar Google Formulier -->
+            <a href="https://forms.gle/Dy9zaLuXdawPbC4K8" class="form-btn" target="_blank">📝 Inschrijven als lid</a>
         </section>
     </main>
 
