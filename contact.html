@@ -24,6 +24,14 @@
         .whatsapp-btn {
             background-color: #25D366;
         }
+        .google-form {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -51,24 +59,10 @@
             <h1>Neem contact met ons op</h1>
             <p>Heb je vragen, ideeën, opmerkingen of wil je samenwerken met PvO Keti Koti? We horen graag van je! Vul onderstaand formulier in en wij nemen zo spoedig mogelijk contact met je op.</p>
 
-            <form action="contact-form.php" method="post">
-                <label for="name">Naam:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">E-mailadres:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="telefoon">Telefoonnummer (optioneel):</label>
-                <input type="tel" id="telefoon" name="telefoon">
-
-                <label for="subject">Onderwerp:</label>
-                <input type="text" id="subject" name="subject" required>
-
-                <label for="message">Jouw bericht:</label>
-                <textarea id="message" name="message" rows="6" required></textarea>
-
-                <button type="submit" class="btn btn-primary">Verstuur bericht</button>
-            </form>
+            <!-- Ingevoegde Google Formulier -->
+            <div class="google-form">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeIPkF9QZfHH9zPT0K-TlHTzlE3ZRedwWa6uo-n0eWIj0lUMQ/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Laden…</iframe>
+            </div>
 
             <div class="contact-buttons">
                 <a href="mailto:info@pvoketikoti.nl" class="email-btn">📧 E-mail ons</a>
