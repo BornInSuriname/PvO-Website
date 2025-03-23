@@ -9,11 +9,9 @@
 </head>
 <body>
     <header class="nav-header">
-        <nav aria-label="Hoofdnavigatie" role="navigation">
+        <nav aria-label="Hoofdnavigatie">
             <div class="nav-container">
-                <button class="menu-toggle" aria-label="Menu openen">
-                    ☰ <span class="sr-only">Menu openen</span>
-                </button>
+                <button class="menu-toggle" aria-label="Menu openen">☰</button>
                 <ul class="nav-links" role="menubar">
                     <li role="none"><a href="index.html" role="menuitem">Home</a></li>
                     <li role="none"><a href="organisatie.html" class="active" role="menuitem">Organisatie & Initiatieven</a></li>
@@ -29,20 +27,8 @@
     <main>
         <section>
             <h1>Organisatie en Initiatieven van PvO Keti Koti</h1>
-
             <h2>Onze Missie</h2>
             <p>Structurele erkenning van het slavernijverleden binnen het GVB en de samenleving.</p>
-
-            <h2>Bestuursleden</h2>
-            <ul>
-                <li>Fabian Vroom – Zichtbaarheid</li>
-                <li>Mariska Ravenberg-Reemnet – Strategische Planning</li>
-                <li>Josephin Schmeltz – Communicatie</li>
-                <li>Marvin Rathling – Culturele Activiteiten</li>
-            </ul>
-
-            <h2>Onze Initiatieven</h2>
-            <p>Herdenkingen, bewustwording en structurele verankering binnen het GVB.</p>
         </section>
     </main>
 
@@ -50,6 +36,7 @@
         <p>&copy; <span id="current-year"></span> PvO Keti Koti. Alle rechten voorbehouden.</p>
     </footer>
 
+    <script src="js/script.js"></script>
     <script>
         document.getElementById("current-year").textContent = new Date().getFullYear();
     </script>
