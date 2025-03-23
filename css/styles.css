@@ -3,11 +3,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #EDE4D0;
-    background-image: url('../image/Logo-PvO-Keti-Koti.png');
-    background-size: 40%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     color: #3E2723;
 }
 
