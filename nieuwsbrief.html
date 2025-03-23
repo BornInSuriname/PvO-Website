@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html lang="nl">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nieuwsbrief - PvO Keti Koti</title>
-    <link> rel="stylesheet" href="css/styles.css">
-    <link> rel="icon" type="image/png" href="image/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="image/favicon.png">
 </head>
 <body>
-
-</head>
-<body>
-   <header class="nav-header">
+    <header class="nav-header">
         <nav aria-label="Hoofdnavigatie">
             <div class="nav-container">
                 <button class="menu-toggle" aria-label="Menu openen">☰</button>
                 <ul class="nav-links" role="menubar">
                     <li role="none"><a href="index.html" role="menuitem">Home</a></li>
-                    <li role="none"><a href="organisatie" role="menuitem">Organisatie & Initiatieven</a></li>
+                    <li role="none"><a href="organisatie.html" role="menuitem">Organisatie & Initiatieven</a></li>
                     <li role="none"><a href="keti-koti.html" role="menuitem">Keti Koti</a></li>
-                    <li role="none"><a href="nieuwsbrief.html"class="active" role="menuitem">Nieuws & Updates</a></li>
+                    <li role="none"><a href="nieuwsbrief.html" class="active" role="menuitem">Nieuws & Updates</a></li>
                     <li role="none"><a href="support.html" role="menuitem">Steun & Contact</a></li>
                     <li role="none"><a href="bewustwording.html" role="menuitem">Educatie & Bewustwording</a></li>
                 </ul>
@@ -28,24 +24,25 @@
         </nav>
     </header>
 
-<main>
-    <section>
-        <h1>Blijf op de hoogte</h1>
-        <p>Schrijf je in voor de nieuwsbrief en ontvang updates over evenementen, initiatieven en belangrijk nieuws rondom PvO Keti Koti.</p>
-        
-        <form action="#" method="post">
-            <label for="email">Jouw e-mailadres:</label>
-            <input type="email" id="email" name="email" required>
-            <button type="submit" class="btn btn-primary">Inschrijven</button>
-        </form>
-    </section>
-</main>
+    <main>
+        <section>
+            <h1>Blijf op de hoogte</h1>
+            <p>Schrijf je in voor de nieuwsbrief en ontvang updates over evenementen, initiatieven en belangrijk nieuws rondom PvO Keti Koti.</p>
+            <form action="#" method="post">
+                <label for="email">Jouw e-mailadres:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit" class="btn btn-primary">Inschrijven</button>
+            </form>
+        </section>
+    </main>
 
-<footer>
-    <p>&copy; <span id="current-year"></span> PvO Keti Koti. Alle rechten voorbehouden.</p>
-</footer>
+    <footer>
+        <p>&copy; <span id="current-year"></span> PvO Keti Koti. Alle rechten voorbehouden.</p>
+    </footer>
 
-<script src="js/script.js"></script>
-
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
