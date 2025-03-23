@@ -71,6 +71,12 @@ footer {
     color: #FFC107;
     text-align: center;
     padding: 1em 0;
+    position: relative;
+}
+
+footer img {
+    height: 60px;
+    margin-top: 10px;
 }
 
 /* Hamburger menu icon styling */
