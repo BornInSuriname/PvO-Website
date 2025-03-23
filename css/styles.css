@@ -1,112 +1,53 @@
 body {
-    font-family: 'Lora', serif;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #EDE4D0;
-    color: #3E2723;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-header {
-    background-color: #5D4037;
-    color: #FFC107;
-    padding: 1em 0;
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .nav-header {
-    position: relative;
-    z-index: 1000;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
 }
 
 .nav-container {
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1em;
-}
-
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
 }
 
 .nav-links {
+    list-style: none;
     display: flex;
-    list-style-type: none;
-    gap: 1em;
+    gap: 20px;
 }
 
 .nav-links a {
-    color: #FFC107;
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #E0A800;
-}
-
-.nav-links.active {
-    display: block;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: #5D4037;
-    width: 100%;
-    text-align: center;
-    padding: 1em 0;
-    transition: all 0.3s ease-in-out;
-}
-
-.nav-links.active a {
-    display: block;
-    margin: 0.5em 0;
 }
 
 footer {
-    background-color: #5D4037;
-    color: #FFC107;
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    padding: 1em 0;
-    position: relative;
+    padding: 10px 0;
+    margin-top: 20px;
 }
 
 footer img {
-    height: 80px;
-    margin-top: 30px;
-}
-
-/* Hamburger menu icon styling */
-.menu-toggle span {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: #FFC107;
-    margin: 5px 0;
-    transition: all 0.3s ease;
-}
-
-.menu-toggle.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-toggle.open span:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-    .nav-links {
-        display: none;
-        flex-direction: column;
-    }
+    max-width: 150px;
+    margin: 10px 0;
 }
