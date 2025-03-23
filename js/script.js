@@ -5,11 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (menuToggle && navLinks) {
         menuToggle.addEventListener("click", function () {
             navLinks.classList.toggle("active");
+            menuToggle.classList.toggle("open");
         });
 
         navLinks.querySelectorAll("a").forEach(link => {
             link.addEventListener("click", function () {
                 navLinks.classList.remove("active");
+                menuToggle.classList.remove("open");
             });
         });
     }
