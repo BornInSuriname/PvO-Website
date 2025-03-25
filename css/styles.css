@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto+Slab:wght@400&display=swap');
+
 body {
-    font-family: 'Lora', serif;
+    font-family: 'Roboto Slab', serif;
     margin: 0;
     padding: 0;
     background-color: #EDE4D0;
     color: #3E2723;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
 }
 
 header {
@@ -113,7 +120,7 @@ footer img {
 }
 
 /* Hamburger menu styling voor mobiel */
-@media (max-width: 800px) {
+@media (max-width: 600px) {
     .menu-toggle {
         display: block;
     }
@@ -134,7 +141,7 @@ footer img {
     }
 
     .menu-icon {
-        font-size: 28px;
+        font-size: 50px;
     }
 
     .container {
