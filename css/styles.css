@@ -85,7 +85,7 @@ header {
 
 /* Container styling voor smallere tekst */
 .container {
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 2em; /* Extra padding voor meer ruimte */
 }
@@ -113,7 +113,7 @@ footer img {
 }
 
 /* Hamburger menu styling voor mobiel */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .menu-toggle {
         display: block;
     }
