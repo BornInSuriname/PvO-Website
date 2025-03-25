@@ -18,7 +18,7 @@ header {
 }
 
 .nav-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -27,9 +27,26 @@ header {
 }
 
 .menu-toggle {
-    display: none;
-    font-size: 28px;
+    background-color: transparent;
+    border: none;
     cursor: pointer;
+    padding: 0.5em;
+    margin: 0.2em;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
+}
+
+.menu-icon {
+    font-size: 22px;
+    color: #FFC107;
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover .menu-icon {
+    color: #E0A800;
 }
 
 .nav-links {
@@ -79,42 +96,28 @@ footer img {
     margin-top: 30px;
 }
 
-/* Hamburger menu icon styling */
-.menu-toggle span {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: #FFC107;
-    margin: 5px 0;
-    transition: all 0.3s ease;
-}
-
-.menu-toggle.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-toggle.open span:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-
+/* Hamburger menu styling */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
     }
+
     .nav-links {
         display: none;
         flex-direction: column;
+        background-color: #5D4037;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
     }
-}
 
+    .nav-links.active {
+        display: block;
+    }
 
-/* Container styling voor smallere tekst */
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 1em;
+    .menu-icon {
+        font-size: 28px;
+    }
 }
