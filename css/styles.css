@@ -83,6 +83,22 @@ header {
     margin: 0.5em 0;
 }
 
+/* Container styling voor smallere tekst */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2em; /* Extra padding voor meer ruimte */
+}
+
+/* Verbeterde sectiestyling */
+section {
+    margin: 1em 0;
+    padding: 1.5em;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 footer {
     background-color: #5D4037;
     color: #FFC107;
@@ -96,7 +112,7 @@ footer img {
     margin-top: 30px;
 }
 
-/* Hamburger menu styling */
+/* Hamburger menu styling voor mobiel */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -119,5 +135,14 @@ footer img {
 
     .menu-icon {
         font-size: 28px;
+    }
+
+    .container {
+        padding: 1.5em; /* Extra padding voor mobiele apparaten */
+    }
+
+    section {
+        margin: 1em 0;
+        padding: 1.2em;
     }
 }
