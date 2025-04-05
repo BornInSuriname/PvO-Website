@@ -35,26 +35,7 @@ header {
 }
 
 .menu-toggle {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0.5em;
-    margin: 0.2em;
-    transition: transform 0.3s ease;
-}
-
-.menu-toggle:hover {
-    transform: scale(1.1);
-}
-
-.menu-icon {
-    font-size: 22px;
-    color: #FFC107;
-    transition: color 0.3s ease;
-}
-
-.menu-toggle:hover .menu-icon {
-    color: #E0A800;
+    display: none;
 }
 
 .nav-links {
@@ -119,7 +100,6 @@ footer img {
     margin-top: 30px;
 }
 
-/* Dark Mode Styles */
 body.dark-mode {
     background-color: #1e1e1e;
     color: #f1f1f1;
@@ -161,6 +141,10 @@ body.dark-mode .nav-links a:hover {
 @media (max-width: 600px) {
     .menu-toggle {
         display: block;
+        background-color: #FFC107;
+        border-radius: 5px;
+        padding: 0.6em;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
 
     .nav-links {
