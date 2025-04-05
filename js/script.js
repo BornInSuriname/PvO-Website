@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
@@ -8,20 +9,32 @@ document.addEventListener("DOMContentLoaded", function () {
             navLinks.classList.toggle("active");
             menuToggle.classList.toggle("open");
 
-            // Verander het icoon bij openen/sluiten
             if (menuToggle.classList.contains("open")) {
-                menuIcon.textContent = "✖";  // Kruisje bij open menu
+                menuIcon.textContent = "âœ–";
             } else {
-                menuIcon.textContent = "☰";  // Hamburger bij gesloten menu
+                menuIcon.textContent = "â˜°";
             }
+
+            menuToggle.setAttribute("aria-expanded", menuToggle.classList.contains("open"));
         });
 
         navLinks.querySelectorAll("a").forEach(link => {
             link.addEventListener("click", function () {
                 navLinks.classList.remove("active");
                 menuToggle.classList.remove("open");
-                menuIcon.textContent = "☰";  // Terug naar hamburger bij klik
+                menuIcon.textContent = "â˜°";
+                menuToggle.setAttribute("aria-expanded", "false");
             });
         });
     }
+
+    // Dark Mode Toggle
+    const toggleBtn = document.createElement("button");
+    toggleBtn.textContent = "Dark Mode";
+    toggleBtn.classList.add("dark-toggle-btn");
+    document.querySelector(".nav-container").appendChild(toggleBtn);
+
+    toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+    });
 });
