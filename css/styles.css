@@ -100,43 +100,6 @@ footer img {
     margin-top: 30px;
 }
 
-body.dark-mode {
-    background-color: #1e1e1e;
-    color: #f1f1f1;
-}
-
-body.dark-mode header,
-body.dark-mode footer,
-body.dark-mode .nav-links,
-body.dark-mode .nav-links.active {
-    background-color: #333;
-    color: #f1f1f1;
-}
-
-body.dark-mode .nav-links a {
-    color: #ffc107;
-}
-
-body.dark-mode .nav-links a:hover {
-    color: #ffa000;
-}
-
-.dark-toggle-btn {
-    cursor: pointer;
-    background: none;
-    border: 2px solid #FFC107;
-    color: #FFC107;
-    padding: 0.4em 0.8em;
-    border-radius: 5px;
-    margin-left: 1em;
-    transition: background 0.3s;
-}
-
-.dark-toggle-btn:hover {
-    background-color: #FFC107;
-    color: #5D4037;
-}
-
 /* Hamburger menu styling voor mobiel */
 @media (max-width: 600px) {
     .menu-toggle {
