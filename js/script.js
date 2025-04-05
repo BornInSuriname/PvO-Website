@@ -27,14 +27,4 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
-
-    // Dark Mode Toggle
-    const toggleBtn = document.createElement("button");
-    toggleBtn.textContent = "Dark Mode";
-    toggleBtn.classList.add("dark-toggle-btn");
-    document.querySelector(".nav-container").appendChild(toggleBtn);
-
-    toggleBtn.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-    });
 });
