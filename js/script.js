@@ -7,11 +7,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const closedMenuIcon = "\u2630"; // Unicode Hamburger
 
     function toggleMenu() {
-        navLinks.classList.toggle("active");
         const isOpen = navLinks.classList.contains("active");
-        menuIcon.textContent = isOpen ? openMenuIcon : closedMenuIcon;
-        menuToggle.setAttribute("aria-expanded", isOpen);
-        menuToggle.classList.toggle("open", isOpen);
+        if (isOpen) {
+            // Start animatie voor sluiten (fade-out)
+            navLinks.style.maxHeight = "0";
+            navLinks.style.opacity = "0";
+            setTimeout(() => {
+                navLinks.classList.remove("active");
+            }, 400); // gelijk aan CSS-transitie
+        } else {
+            navLinks.classList.add("active");
+            navLinks.style.maxHeight = "500px";
+            navLinks.style.opacity = "1";
+        }
+
+        menuIcon.textContent = isOpen ? closedMenuIcon : openMenuIcon;
+        menuToggle.setAttribute("aria-expanded", !isOpen);
+        menuToggle.classList.toggle("open", !isOpen);
     }
 
     if (menuToggle && navLinks && menuIcon) {
@@ -19,20 +31,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
         navLinks.querySelectorAll("a").forEach(link => {
             link.addEventListener("click", () => {
-                navLinks.classList.remove("active");
-                menuToggle.classList.remove("open");
-                menuIcon.textContent = closedMenuIcon;
-                menuToggle.setAttribute("aria-expanded", "false");
+                navLinks.style.maxHeight = "0";
+                navLinks.style.opacity = "0";
+                setTimeout(() => {
+                    navLinks.classList.remove("active");
+                    menuToggle.classList.remove("open");
+                    menuIcon.textContent = closedMenuIcon;
+                    menuToggle.setAttribute("aria-expanded", "false");
+                }, 400);
             });
         });
 
-        // Verwijder mobiel menu bij schermvergroting
         window.addEventListener("resize", () => {
             if (window.innerWidth > 600 && navLinks.classList.contains("active")) {
-                navLinks.classList.remove("active");
-                menuToggle.classList.remove("open");
-                menuIcon.textContent = closedMenuIcon;
-                menuToggle.setAttribute("aria-expanded", "false");
+                navLinks.style.maxHeight = "0";
+                navLinks.style.opacity = "0";
+                setTimeout(() => {
+                    navLinks.classList.remove("active");
+                    menuToggle.classList.remove("open");
+                    menuIcon.textContent = closedMenuIcon;
+                    menuToggle.setAttribute("aria-expanded", "false");
+                }, 400);
             }
         });
     }
