@@ -8,18 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function toggleMenu() {
         const isOpen = navLinks.classList.contains("active");
-        if (isOpen) {
-            // Start animatie voor sluiten (fade-out)
-            navLinks.style.maxHeight = "0";
-            navLinks.style.opacity = "0";
-            setTimeout(() => {
-                navLinks.classList.remove("active");
-            }, 400); // gelijk aan CSS-transitie
-        } else {
-            navLinks.classList.add("active");
-            navLinks.style.maxHeight = "500px";
-            navLinks.style.opacity = "1";
-        }
+        // In de toggleMenu functie:
+if (isOpen) {
+    navLinks.style.maxHeight = "0";
+    navLinks.style.opacity = "0";
+} else {
+    navLinks.classList.add("active");
+    navLinks.style.maxHeight = navLinks.scrollHeight + "px"; // Dynamische hoogte
+    navLinks.style.opacity = "1";
+}
 
         menuIcon.textContent = isOpen ? closedMenuIcon : openMenuIcon;
         menuToggle.setAttribute("aria-expanded", !isOpen);
