@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="nl">
+<!DOCTYPE html><html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +10,9 @@
     <header class="nav-header">
         <nav aria-label="Hoofdnavigatie">
             <div class="nav-container">
-                <button class="menu-toggle" aria-label="Menu openen">☰</button>
+                <button class="menu-toggle" aria-label="Menu openen">
+                    <span class="menu-icon">☰</span>
+                </button>
                 <ul class="nav-links" role="menubar">
                     <li role="none"><a href="index.html" role="menuitem">Home</a></li>
                     <li role="none"><a href="organisatie.html" role="menuitem">Organisatie & Initiatieven</a></li>
@@ -21,30 +22,32 @@
                 </ul>
             </div>
         </nav>
-    </header>
+    </header><main>
+    <div class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Blijf op de hoogte</h1>
+                <p>Wil je op de hoogte blijven van nieuwe initiatieven, ontwikkelingen binnen het GVB en de voortgang van onze missie? Meld je aan voor onze nieuwsbrief en ontvang inspirerende updates rechtstreeks in je inbox.</p>
 
-    <main>
-        <div class="container">
-            <section class="hero">
-                <div class="hero-content">
-            <h1>Blijf op de hoogte</h1>
-            <p>Schrijf je in voor de nieuwsbrief en ontvang updates over initiatieven en belangrijk nieuws rondom PvO Keti Koti.</p>
-            <form action="#" method="post">
-                <label for="email">Jouw e-mailadres:</label>
-                <input type="email" id="email" name="email" required>
-                <button type="submit" class="btn btn-primary">Inschrijven</button>
-            </form>
+                <form action="#" method="post">
+                    <label for="email">Jouw e-mailadres:</label><br>
+                    <input type="email" id="email" name="email" placeholder="voorbeeld@domein.nl" required><br>
+                    <button type="submit" class="cta-button">Inschrijven</button>
+                </form>
+            </div>
         </section>
-    </main>
+    </div>
+</main>
 
-    <footer>
+<footer>
     <p>&copy; <span id="current-year"></span> PvO Keti Koti. Alle rechten voorbehouden.</p>
     <img src="images/logo/Logo PvO Keti Koti.png" alt="PvO Keti Koti Logo">
-    </footer>
+</footer>
 
-    <script src="js/script.js"></script>
-    <script>
-        document.getElementById("current-year").textContent = new Date().getFullYear();
-    </script>
+<script src="js/script.js"></script>
+<script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
