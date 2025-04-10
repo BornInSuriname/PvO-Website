@@ -1,30 +1,34 @@
+document.addEventListener("DOMContentLoaded", () => { const menuToggle = document.querySelector(".menu-toggle"); const navLinks = document.querySelector(".nav-links"); const menuIcon = document.querySelector(".menu-icon");
 
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-    const menuIcon = document.querySelector(".menu-icon");
+const openMenuIcon = "\u2715"; // Unicode 'X'
+const closedMenuIcon = "\u2630"; // Unicode Hamburger
 
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener("click", function () {
-            navLinks.classList.toggle("active");
-            menuToggle.classList.toggle("open");
+function toggleMenu() {
+    navLinks.classList.toggle("active");
+    const isOpen = navLinks.classList.contains("active");
+    menuIcon.textContent = isOpen ? openMenuIcon : closedMenuIcon;
+    menuToggle.setAttribute("aria-expanded", isOpen);
+}
 
-            if (menuToggle.classList.contains("open")) {
-                menuIcon.textContent = "âœ–";
-            } else {
-                menuIcon.textContent = "â˜°";
-            }
+if (menuToggle && navLinks && menuIcon) {
+    menuToggle.addEventListener("click", toggleMenu);
 
-            menuToggle.setAttribute("aria-expanded", menuToggle.classList.contains("open"));
+    navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+            menuIcon.textContent = closedMenuIcon;
+            menuToggle.setAttribute("aria-expanded", "false");
         });
+    });
 
-        navLinks.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", function () {
-                navLinks.classList.remove("active");
-                menuToggle.classList.remove("open");
-                menuIcon.textContent = "â˜°";
-                menuToggle.setAttribute("aria-expanded", "false");
-            });
-        });
-    }
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 600 && navLinks.classList.contains("active")) {
+            navLinks.classList.remove("active");
+            menuIcon.textContent = closedMenuIcon;
+            menuToggle.setAttribute("aria-expanded", "false");
+        }
+    });
+}
+
 });
+
