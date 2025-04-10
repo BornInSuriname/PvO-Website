@@ -35,6 +35,15 @@ header {
 
 .menu-toggle {
     display: none;
+    background: none;
+    border: none;
+    padding: 0.3em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle.open .menu-icon {
+    transform: rotate(90deg);
 }
 
 .nav-links {
@@ -42,6 +51,10 @@ header {
     list-style-type: none;
     gap: 1em;
     justify-self: center;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
 }
 
 .nav-links a {
@@ -62,16 +75,8 @@ header {
     width: 100%;
     background-color: #5D4037;
     text-align: center;
-    overflow: hidden;
     max-height: 500px;
     opacity: 1;
-}
-
-.nav-links {
-    transition: max-height 0.4s ease-in-out, opacity 0.3s ease;
-    overflow: hidden;
-    max-height: 0;
-    opacity: 0;
 }
 
 .nav-links.active a {
@@ -143,17 +148,19 @@ a:hover, button:hover {
 @media (max-width: 600px) {
     .menu-toggle {
         display: block;
-        background-color: #FFC107;
-        border-radius: 5px;
-        padding: 0.4em 0.6em;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-        cursor: pointer;
-        font-size: 1.2rem;
+        background: transparent;
         border: none;
+        padding: 0.4em;
+        cursor: pointer;
+        font-size: 1.4rem;
+        position: relative;
+        z-index: 1100;
     }
 
     .menu-icon {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
+        display: inline-block;
+        transition: transform 0.3s ease;
     }
 
     .container {
