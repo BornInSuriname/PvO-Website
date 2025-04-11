@@ -10,21 +10,33 @@
 <a href="#main-content" class="skip-link">Direct naar hoofdinhoud</a>
 
 <header class="nav-header">
-    <nav aria-label="Hoofdnavigatie">
-        <div class="nav-container">
-            <button class="menu-toggle" aria-label="Menu openen">
-                <span class="menu-icon">☰</span>
-            </button>
-            <ul class="nav-links" role="menubar">
-                <li role="none"><a href="index.html" class="active" role="menuitem">Home</a></li>
-                <li role="none"><a href="organisatie.html" role="menuitem">Organisatie & Initiatieven</a></li>
-                <li role="none"><a href="keti-koti.html" role="menuitem">Keti Koti</a></li>
-                <li role="none"><a href="nieuwsbrief.html" role="menuitem">Nieuws & Updates</a></li>
-                <li role="none"><a href="support.html" role="menuitem">Steun & Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-</header><main>
+  <div class="nav-container">
+    <button class="menu-toggle" aria-label="Menu openen" onclick="toggleMenu()">
+      <span class="menu-icon">&#9776;</span>
+    </button>
+    <div class="logo" style="text-align:center; width:100%;">
+      <img src="images/logo/Logo PvO Keti Koti.png" alt="PvO Keti Koti Logo" style="height: 60px;">
+    </div>
+  </div>
+
+  <nav>
+    <ul class="nav-links" id="navMenu">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="organisatie.html">Organisatie & Initiatieven</a></li>
+      <li><a href="keti-koti.html">Keti Koti</a></li>
+      <li><a href="nieuwsbrief.html">Nieuws & Updates</a></li>
+      <li><a href="support.html">Steun & Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('navMenu');
+    menu.classList.toggle('active');
+  }
+</script>
+    <main>
     <div class="container">
         <section class="hero">
             <div class="hero-content">
