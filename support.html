@@ -1,93 +1,108 @@
-<!DOCTYPE html><html lang="nl">
+<!DOCTYPE html>
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steun en Contact - PvO Keti Koti</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/png" href="image/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steun en Contact - PvO Keti Koti</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="image/favicon.png">
 </head>
 <body>
-    <header class="nav-header">
-        <nav aria-label="Hoofdnavigatie">
-            <div class="nav-container">
-                <button class="menu-toggle" aria-label="Menu openen">
-                    <span class="menu-icon">☰</span>
-                </button>
-                <ul class="nav-links" role="menubar">
-                    <li role="none"><a href="index.html" role="menuitem">Home</a></li>
-                    <li role="none"><a href="organisatie.html" role="menuitem">Organisatie & Initiatieven</a></li>
-                    <li role="none"><a href="keti-koti.html" role="menuitem">Keti Koti</a></li>
-                    <li role="none"><a href="nieuwsbrief.html" role="menuitem">Nieuws & Updates</a></li>
-                    <li role="none"><a href="support.html" class="active" role="menuitem">Steun & Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header><main>
-    <!-- Lidmaatschap sectie -->
-    <div class="container">
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Word lid van PvO Keti Koti</h1>
-                <p>Wil jij actief bijdragen aan de herdenking van Keti Koti binnen het GVB? Als lid van PvO Keti Koti maak je deel uit van een beweging die bewustwording, zichtbaarheid en erkenning van het slavernijverleden bevordert.</p>
-                <p>Als lid kun je rekenen op:</p>
-                <ul>
-                    <li>✅ Actieve deelname aan herdenkingsmomenten en bijeenkomsten.</li>
-                    <li>✅ Meedenken en helpen bij het organiseren van initiatieven.</li>
-                    <li>✅ Exclusieve toegang tot interne updates en nieuwsbrieven.</li>
-                    <li>✅ Een netwerk van bevlogen collega's en gelijkgestemden.</li>
-                </ul>
-                <p>Klik op de onderstaande knop en sluit je aan bij onze missie voor inclusie en erkenning:</p>
-                <a href="https://forms.gle/Dy9zaLuXdawPbC4K8" class="cta-button" target="_blank">📝 Inschrijven als lid</a>
-            </div>
-        </section>
-    </div>
+<a href="#main-content" class="skip-link">Direct naar hoofdinhoud</a>
 
-    <!-- Donatie sectie -->
-    <div class="container">
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Steun PvO Keti Koti</h1>
-                <p>Met jouw donatie kunnen we blijven investeren in zichtbaarheid, bewustwording en structurele verandering. Iedere bijdrage – klein of groot – maakt verschil.</p>
-                <h2>Waarom doneren?</h2>
-                <ul>
-                    <li>💡 Ondersteun educatieve en culturele bewustwording over het slavernijverleden.</li>
-                    <li>🎉 Maak evenementen en symbolische herdenkingen mogelijk.</li>
-                    <li>🤝 Stimuleer verbinding en gedeelde verhalen binnen het GVB.</li>
-                    <li>🌍 Help de boodschap van Keti Koti te verankeren voor de toekomst.</li>
-                </ul>
-                <p>Klik op de onderstaande knop om veilig te doneren:</p>
-                <a href="https://whydonate.com/nl/donate/donatie-voor-pvo-keti-koti" class="cta-button" target="_blank">💸 Doneer nu</a>
-            </div>
-        </section>
+<header class="nav-header">
+  <div class="nav-container">
+    <button class="menu-toggle" aria-label="Menu openen" onclick="toggleMenu()">
+      <span class="menu-icon">&#9776;</span>
+    </button>
+    <div class="logo" style="text-align:center; width:100%;">
+      <img src="images/logo/Logo PvO Keti Koti.png" alt="PvO Keti Koti Logo" style="height: 60px;">
     </div>
+  </div>
 
-    <!-- Contact sectie -->
-    <div class="container">
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Neem contact met ons op</h1>
-                <p>Heb je vragen, ideeën of wil je met ons samenwerken? We staan open voor suggesties, samenwerkingen en feedback. Neem gerust contact op.</p>
-                <a href="https://forms.gle/f6xJwAHE2emzE6gU8" class="cta-button" target="_blank">📝 Vul het contactformulier in</a>
-                <h2>Andere contactopties:</h2>
-                <div class="contact-buttons">
-                    <a href="mailto:info@pvoketikoti.nl" class="email-btn">📧 Stuur ons een e-mail</a>
-                    <a href="https://wa.me/31612345678" class="whatsapp-btn" target="_blank">💬 Stuur een WhatsApp</a>
-                </div>
-                <p>We doen ons best om binnen 48 uur te reageren. Jouw stem draagt bij aan onze missie voor inclusiviteit, erkenning en verbinding.</p>
-            </div>
-        </section>
-    </div>
+  <nav>
+    <ul class="nav-links" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="organisatie.html">Organisatie & Initiatieven</a></li>
+      <li><a href="keti-koti.html">Keti Koti</a></li>
+      <li><a href="nieuwsbrief.html">Nieuws & Updates</a></li>
+      <li><a href="support.html" class="active">Steun & Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main-content">
+
+  <!-- Lidmaatschap sectie -->
+  <div class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Word lid van PvO Keti Koti</h1>
+        <p>Wil jij actief bijdragen aan de herdenking van Keti Koti binnen het GVB? Als lid van PvO Keti Koti maak je deel uit van een beweging die bewustwording, zichtbaarheid en erkenning van het slavernijverleden bevordert.</p>
+        <p>Als lid kun je rekenen op:</p>
+        <ul>
+          <li>✅ Actieve deelname aan herdenkingsmomenten en bijeenkomsten.</li>
+          <li>✅ Meedenken en helpen bij het organiseren van initiatieven.</li>
+          <li>✅ Exclusieve toegang tot interne updates en nieuwsbrieven.</li>
+          <li>✅ Een netwerk van bevlogen collega's en gelijkgestemden.</li>
+        </ul>
+        <p>Klik op de onderstaande knop en sluit je aan bij onze missie voor inclusie en erkenning:</p>
+        <a href="https://forms.gle/Dy9zaLuXdawPbC4K8" class="cta-button" target="_blank">📝 Inschrijven als lid</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Donatie sectie -->
+  <div class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Steun PvO Keti Koti</h1>
+        <p>Met jouw donatie kunnen we blijven investeren in zichtbaarheid, bewustwording en structurele verandering. Iedere bijdrage – klein of groot – maakt verschil.</p>
+        <h2>Waarom doneren?</h2>
+        <ul>
+          <li>💡 Ondersteun educatieve en culturele bewustwording over het slavernijverleden.</li>
+          <li>🎉 Maak evenementen en symbolische herdenkingen mogelijk.</li>
+          <li>🤝 Stimuleer verbinding en gedeelde verhalen binnen het GVB.</li>
+          <li>🌍 Help de boodschap van Keti Koti te verankeren voor de toekomst.</li>
+        </ul>
+        <p>Klik op de onderstaande knop om veilig te doneren:</p>
+        <a href="https://whydonate.com/nl/donate/donatie-voor-pvo-keti-koti" class="cta-button" target="_blank">💸 Doneer nu</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Contact sectie -->
+  <div class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Neem contact met ons op</h1>
+        <p>Heb je vragen, ideeën of wil je met ons samenwerken? We staan open voor suggesties, samenwerkingen en feedback. Neem gerust contact op.</p>
+        <a href="https://forms.gle/f6xJwAHE2emzE6gU8" class="cta-button" target="_blank">📝 Vul het contactformulier in</a>
+        <h2>Andere contactopties:</h2>
+        <div class="contact-buttons">
+          <a href="mailto:info@pvoketikoti.nl" class="email-btn">📧 Stuur ons een e-mail</a>
+          <a href="https://wa.me/31612345678" class="whatsapp-btn" target="_blank">💬 Stuur een WhatsApp</a>
+        </div>
+        <p>We doen ons best om binnen 48 uur te reageren. Jouw stem draagt bij aan onze missie voor inclusiviteit, erkenning en verbinding.</p>
+      </div>
+    </section>
+  </div>
+
 </main>
 
 <footer>
-    <p>&copy; <span id="current-year"></span> PvO Keti Koti. Alle rechten voorbehouden.</p>
-    <img src="images/logo/Logo PvO Keti Koti.png" alt="PvO Keti Koti Logo">
+  <p>&copy; <span id="current-year"></span> PvO Keti Koti. Alle rechten voorbehouden.</p>
+  <img src="images/logo/Logo PvO Keti Koti.png" alt="PvO Keti Koti Logo">
 </footer>
 
 <script src="js/script.js"></script>
 <script>
-    document.getElementById("current-year").textContent = new Date().getFullYear();
-</script>
+  document.getElementById("current-year").textContent = new Date().getFullYear();
 
+  function toggleMenu() {
+    const menu = document.getElementById('navMenu');
+    menu.classList.toggle('active');
+  }
+</script>
 </body>
 </html>
