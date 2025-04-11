@@ -1,55 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
-    const menuIcon = document.querySelector(".menu-icon");
-
-    const openMenuIcon = "✕"; // Unicode 'X'
-    const closedMenuIcon = "☰"; // Unicode Hamburger
 
     function toggleMenu() {
-        const isOpen = navLinks.classList.contains("active");
+        const isMobile = window.innerWidth <= 600;
         
-        if (isOpen) {
-            navLinks.style.maxHeight = "0";
-            navLinks.style.opacity = "0";
-            setTimeout(() => {
-                navLinks.classList.remove("active");
-            }, 400);
-        } else {
-            navLinks.classList.add("active");
-            navLinks.style.maxHeight = navLinks.scrollHeight + "px";
-            navLinks.style.opacity = "1";
+        if (isMobile) {
+            const isOpen = navLinks.classList.contains("active");
+            navLinks.classList.toggle("active");
+            navLinks.style.maxHeight = isOpen ? "0" : navLinks.scrollHeight + "px";
+            navLinks.style.opacity = isOpen ? "0" : "1";
+            menuToggle.setAttribute("aria-expanded", !isOpen);
         }
-
-        menuIcon.textContent = isOpen ? closedMenuIcon : openMenuIcon;
-        menuToggle.setAttribute("aria-expanded", !isOpen);
     }
 
-    if (menuToggle && navLinks && menuIcon) {
-        menuToggle.addEventListener("click", toggleMenu);
-
-        navLinks.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", () => {
-                navLinks.style.maxHeight = "0";
-                navLinks.style.opacity = "0";
-                setTimeout(() => {
-                    navLinks.classList.remove("active");
-                    menuIcon.textContent = closedMenuIcon;
-                    menuToggle.setAttribute("aria-expanded", "false");
-                }, 400);
-            });
-        });
-
-        window.addEventListener("resize", () => {
-            if (window.innerWidth > 600 && navLinks.classList.contains("active")) {
-                navLinks.style.maxHeight = "0";
-                navLinks.style.opacity = "0";
-                setTimeout(() => {
-                    navLinks.classList.remove("active");
-                    menuIcon.textContent = closedMenuIcon;
-                    menuToggle.setAttribute("aria-expanded", "false");
-                }, 400);
-            }
-        });
+    // Toon standaard menu op desktop bij laden
+    function handleResize() {
+        if (window.innerWidth > 600) {
+            navLinks.style.display = "flex";
+            navLinks.style.maxHeight = "none";
+            navLinks.style.opacity = "1";
+        } else {
+            navLinks.style.display = "none";
+        }
     }
+
+    // Eerste keer laden
+    handleResize();
+
+    // Event listeners
+    menuToggle.addEventListener("click", toggleMenu);
+    window.addEventListener("resize", handleResize);
 });
