@@ -1,53 +1,66 @@
-<!DOCTYPE html><html lang="nl">
+<!DOCTYPE html>
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nieuwsbrief - PvO Keti Koti</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/png" href="image/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nieuwsbrief - PvO Keti Koti</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="image/favicon.png">
 </head>
 <body>
-    <header class="nav-header">
-        <nav aria-label="Hoofdnavigatie">
-            <div class="nav-container">
-                <button class="menu-toggle" aria-label="Menu openen">
-                    <span class="menu-icon">☰</span>
-                </button>
-                <ul class="nav-links" role="menubar">
-                    <li role="none"><a href="index.html" role="menuitem">Home</a></li>
-                    <li role="none"><a href="organisatie.html" role="menuitem">Organisatie & Initiatieven</a></li>
-                    <li role="none"><a href="keti-koti.html" role="menuitem">Keti Koti</a></li>
-                    <li role="none"><a href="nieuwsbrief.html" class="active" role="menuitem">Nieuws & Updates</a></li>
-                    <li role="none"><a href="support.html" role="menuitem">Steun & Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header><main>
-    <div class="container">
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Blijf op de hoogte</h1>
-                <p>Wil je op de hoogte blijven van nieuwe initiatieven, ontwikkelingen binnen het GVB en de voortgang van onze missie? Meld je aan voor onze nieuwsbrief en ontvang inspirerende updates rechtstreeks in je inbox.</p>
+<a href="#main-content" class="skip-link">Direct naar hoofdinhoud</a>
 
-                <form action="#" method="post">
-                    <label for="email">Jouw e-mailadres:</label><br>
-                    <input type="email" id="email" name="email" placeholder="voorbeeld@domein.nl" required><br>
-                    <button type="submit" class="cta-button">Inschrijven</button>
-                </form>
-            </div>
-        </section>
+<header class="nav-header">
+  <div class="nav-container">
+    <button class="menu-toggle" aria-label="Menu openen" onclick="toggleMenu()">
+      <span class="menu-icon">&#9776;</span>
+    </button>
+    <div class="logo" style="text-align:center; width:100%;">
+      <img src="images/logo/Logo PvO Keti Koti.png" alt="PvO Keti Koti Logo" style="height: 60px;">
     </div>
+  </div>
+
+  <nav>
+    <ul class="nav-links" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="organisatie.html">Organisatie & Initiatieven</a></li>
+      <li><a href="keti-koti.html">Keti Koti</a></li>
+      <li><a href="nieuwsbrief.html" class="active">Nieuws & Updates</a></li>
+      <li><a href="support.html">Steun & Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main-content">
+  <div class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Blijf op de hoogte</h1>
+        <p>Wil je op de hoogte blijven van nieuwe initiatieven, ontwikkelingen binnen het GVB en de voortgang van onze missie? Meld je aan voor onze nieuwsbrief en ontvang inspirerende updates rechtstreeks in je inbox.</p>
+
+        <form action="#" method="post">
+          <label for="email">Jouw e-mailadres:</label><br>
+          <input type="email" id="email" name="email" placeholder="voorbeeld@domein.nl" required><br>
+          <button type="submit" class="cta-button">Inschrijven</button>
+        </form>
+      </div>
+    </section>
+  </div>
 </main>
 
 <footer>
-    <p>&copy; <span id="current-year"></span> PvO Keti Koti. Alle rechten voorbehouden.</p>
-    <img src="images/logo/Logo PvO Keti Koti.png" alt="PvO Keti Koti Logo">
+  <p>&copy; <span id="current-year"></span> PvO Keti Koti. Alle rechten voorbehouden.</p>
+  <img src="images/logo/Logo PvO Keti Koti.png" alt="PvO Keti Koti Logo">
 </footer>
 
 <script src="js/script.js"></script>
 <script>
-    document.getElementById("current-year").textContent = new Date().getFullYear();
-</script>
+  document.getElementById("current-year").textContent = new Date().getFullYear();
 
+  function toggleMenu() {
+    const menu = document.getElementById('navMenu');
+    menu.classList.toggle('active');
+  }
+</script>
 </body>
 </html>
