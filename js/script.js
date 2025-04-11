@@ -3,24 +3,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelector(".nav-links");
     const menuIcon = document.querySelector(".menu-icon");
 
-    const openMenuIcon = "\u2715"; // Unicode 'X'
-    const closedMenuIcon = "\u2630"; // Unicode Hamburger
+    const openMenuIcon = "✕"; // Unicode 'X'
+    const closedMenuIcon = "☰"; // Unicode Hamburger
 
     function toggleMenu() {
         const isOpen = navLinks.classList.contains("active");
-        // In de toggleMenu functie:
-if (isOpen) {
-    navLinks.style.maxHeight = "0";
-    navLinks.style.opacity = "0";
-} else {
-    navLinks.classList.add("active");
-    navLinks.style.maxHeight = navLinks.scrollHeight + "px"; // Dynamische hoogte
-    navLinks.style.opacity = "1";
-}
+        
+        if (isOpen) {
+            navLinks.style.maxHeight = "0";
+            navLinks.style.opacity = "0";
+            setTimeout(() => {
+                navLinks.classList.remove("active");
+            }, 400);
+        } else {
+            navLinks.classList.add("active");
+            navLinks.style.maxHeight = navLinks.scrollHeight + "px";
+            navLinks.style.opacity = "1";
+        }
 
         menuIcon.textContent = isOpen ? closedMenuIcon : openMenuIcon;
         menuToggle.setAttribute("aria-expanded", !isOpen);
-        menuToggle.classList.toggle("open", !isOpen);
     }
 
     if (menuToggle && navLinks && menuIcon) {
@@ -32,7 +34,6 @@ if (isOpen) {
                 navLinks.style.opacity = "0";
                 setTimeout(() => {
                     navLinks.classList.remove("active");
-                    menuToggle.classList.remove("open");
                     menuIcon.textContent = closedMenuIcon;
                     menuToggle.setAttribute("aria-expanded", "false");
                 }, 400);
@@ -45,7 +46,6 @@ if (isOpen) {
                 navLinks.style.opacity = "0";
                 setTimeout(() => {
                     navLinks.classList.remove("active");
-                    menuToggle.classList.remove("open");
                     menuIcon.textContent = closedMenuIcon;
                     menuToggle.setAttribute("aria-expanded", "false");
                 }, 400);
